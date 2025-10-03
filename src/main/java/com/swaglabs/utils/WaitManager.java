@@ -16,7 +16,7 @@ public class WaitManager {
 
     public FluentWait<AndroidDriver> fluentWait() {
         return new FluentWait<>(driver)
-                .withTimeout(Duration.ofSeconds(Long.parseLong(PropertyReader.getProperty("Default_Wait"))))
+                .withTimeout(Duration.ofSeconds(Long.parseLong(PropertyReader.getProperty("androidAppWaitTime"))))
                 .pollingEvery(Duration.ofMillis(100))
                 .ignoreAll(Exceptionn());
     }

@@ -1,16 +1,15 @@
 package com.swaglabs.utils.actions;
 
+import com.swaglabs.android.DriverManager;
 import com.swaglabs.utils.WaitManager;
 import com.swaglabs.utils.logs.LogsManager;
 import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.touch.offset.ElementOption;
-import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import com.swaglabs.utils.actions.MobileAndroidAction;
+
 import java.util.List;
 
 public class ElementAction {
@@ -83,19 +82,20 @@ public class ElementAction {
     }
 
     //scroll to element
-    public WebElement scrollToElement(By locator) {
+    public void scrollToElement(By locator) {
         int maxScrolls = 5;
         for (int i = 0; i < maxScrolls; i++) {
             try {
                 WebElement element = driver.findElement(locator);
                 if (element.isDisplayed()) {
-                    LogsManager.info("Scrolled to element: " + locator);
-                    return element;
+                    clicking(locator);
+                    LogsManager.info("Found and clicked on element: " + locator);
+                    return;
                 }
             } catch (Exception ignored) {
             }
-            mobileAction = new MobileAndroidAction(driver);
-            mobileAction.swipeDown();
+            DriverManager.mobileAction().swipeDown();
+            LogsManager.info("Swipe down attempt " + (i + 1) + " to find: " + locator);
         }
         throw new RuntimeException("Element not found after scrolling: " + locator);
     }

@@ -4,6 +4,7 @@ import com.swaglabs.utils.actions.ElementAction;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
+import com.swaglabs.android.DriverManager;
 
 public class Page01_Login {
     private AndroidDriver driver;
@@ -14,7 +15,23 @@ public class Page01_Login {
     public Page01_Login(AndroidDriver driver) {
         this.driver=driver;
     }
-    public void userName(String username) {
-        new ElementAction(driver).sendkeys(this.username, username);
+    public Page01_Login userName(String username) {
+        DriverManager.getElementAction().sendkeys(this.username, username);
+        return this;
     }
+    public Page01_Login passWord(String password) {
+        DriverManager.getElementAction().sendkeys(this.password, password);
+        return this;
+    }
+    public Page02_Home loginBtn() {
+        DriverManager.getElementAction().clicking(this.loginBtn);
+        return new Page02_Home(driver);
+    }
+    public Page02_Home clickUsernam() {
+        DriverManager.getElementAction().scrollToElement(this.ClickUsernam);
+        DriverManager.getElementAction().clicking(this.loginBtn);
+        return new Page02_Home(driver);
+    }
+    //Assertion methods can be added here
+
 }

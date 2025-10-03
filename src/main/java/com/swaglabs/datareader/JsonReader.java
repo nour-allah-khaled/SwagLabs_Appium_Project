@@ -21,7 +21,7 @@ public class JsonReader {
             jsonReader = "{}";
         }
     }
-    public String getJsonData(String jsonPath) {
+    public static String getJsonData(String jsonPath) {
         try {
             return JsonPath.read(jsonReader, jsonPath);
         } catch (Exception e) {
