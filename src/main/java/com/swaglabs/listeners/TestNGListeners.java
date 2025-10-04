@@ -1,17 +1,13 @@
 package com.swaglabs.listeners;
-
-
+import com.swaglabs.android.DriverManager;
 import com.swaglabs.assertions.SoftAssertion;
 import com.swaglabs.datareader.PropertyReader;
 import com.swaglabs.media.ScreenShotMedia;
 import com.swaglabs.utils.AllureUtil;
 import com.swaglabs.utils.logs.LogsManager;
 import io.appium.java_client.android.AndroidDriver;
-import org.openqa.selenium.WebDriver;
 import org.testng.*;
-
 import java.io.File;
-
 import static com.swaglabs.utils.logs.LogsManager.LOGS_PATH;
 
 public class TestNGListeners implements IExecutionListener, IInvokedMethodListener, ITestListener {
@@ -38,7 +34,7 @@ public class TestNGListeners implements IExecutionListener, IInvokedMethodListen
     public void afterInvocation(IInvokedMethod method, ITestResult testResult, ITestContext context) {
         AndroidDriver driver = null;
         if (method.isTestMethod()) {
-              //  driver = GUIFactory.getDriver(); //driver.getDriver();
+              driver = DriverManager.getDriver(); //driver.getDriver();
                 ScreenShotMedia.Screen_shot(driver, "ScreenShot-" + testResult.getName());
                 SoftAssertion.assertAll();
                 if (testResult.getStatus() == ITestResult.FAILURE) {
