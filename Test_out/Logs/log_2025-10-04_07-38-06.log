@@ -1,0 +1,9 @@
+[ERROR] 04-10-2025 07:38:07 [main] [com.swaglabs.datareader.JsonReader] - Error reading json file for path: userName json string can not be null or empty
+[ERROR] 04-10-2025 07:38:07 [main] [com.swaglabs.datareader.JsonReader] - Error reading json file for path: password json string can not be null or empty
+[INFO] 04-10-2025 07:38:14 [main] [com.swaglabs.android.DriverManager] - Appium service started.
+[INFO] 04-10-2025 07:38:26 [main] [com.swaglabs.android.DriverManager] - Driver initialized for platform: null
+[INFO] 04-10-2025 07:38:29 [main] [com.swaglabs.utils.actions.ElementAction] - Typed text '' into element: AppiumBy.accessibilityId: test-Username
+[INFO] 04-10-2025 07:38:30 [main] [com.swaglabs.utils.actions.ElementAction] - Typed text '' into element: AppiumBy.accessibilityId: test-Password
+[INFO] 04-10-2025 07:38:31 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-LOGIN
+[INFO] 04-10-2025 07:38:52 [main] [com.swaglabs.android.DriverManager] - Driver quit successfully
+[INFO] 04-10-2025 07:38:52 [main] [com.swaglabs.android.DriverManager] - Appium server stopped successfully

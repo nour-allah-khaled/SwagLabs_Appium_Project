@@ -10,7 +10,7 @@ public class TC01_Login extends BaseClass {
     private static final String Password = JsonReader.getJsonData("password");
     @Test
     public void LoginTest(){
-        new Page01_Login(DriverManager.getDriver()).userName(UserName).
-                passWord(Password).loginBtn();
+        new Page01_Login(DriverManager.getDriver()).userName(UserName)
+                .passWord(Password).loginBtn().assertLogin();
     }
 }

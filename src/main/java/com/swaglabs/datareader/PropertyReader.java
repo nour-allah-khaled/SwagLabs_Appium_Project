@@ -33,6 +33,7 @@ public class PropertyReader {
 
     public static String getProperty(String key) {
         try {
+            loadProperties();
             return System.getProperty(key);
         } catch (Exception e) {
             LogsManager.error("Error getting property for key:", key, e.getMessage());

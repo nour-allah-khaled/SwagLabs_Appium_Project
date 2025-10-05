@@ -20,6 +20,7 @@ public class AndroidFactory {
                 .setApp(PropertyReader.getProperty("androidAppPath"))
                 .setAppActivity(PropertyReader.getProperty("androidAppActivity"))
                 .setAutomationName(PropertyReader.getProperty("androidAutomationName"))
+                .setAppPackage(PropertyReader.getProperty("AppPackage"))
                 .setAppWaitDuration(Duration.ofSeconds(Integer.parseInt(PropertyReader.getProperty("androidAppWaitTime"))))
                 .setAutoGrantPermissions(true)
                 .setNoReset(false);

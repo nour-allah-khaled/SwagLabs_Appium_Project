@@ -40,19 +40,29 @@ public class ElementAction {
 
     //typing
     public void sendkeys(By locator, String text) {
-        wait.fluentWait().until(
-                d -> {
-                    try {
-                        WebElement element = driver.findElement(locator);
-                        element.clear();
-                        element.sendKeys(text);
-                        LogsManager.info("Typed text '" + text + "' into element: " + locator);
-                        return true;
-                    } catch (Exception e) {
-                        return false;
-                    }
+        try {
+            WebElement element = wait.fluentWait().until(driver -> {
+                WebElement el = driver.findElement(locator);
+                return (el.isDisplayed() && el.isEnabled()) ? el : null;
+            });
+            wait.fluentWait().until(driver -> {
+                try {
+                    element.click();
+                    LogsManager.info("Focused on element: " + locator);
+                    return true;
+                } catch (Exception e) {
+                    return false;
                 }
-        );
+            });
+            wait.fluentWait().until(
+                    driver -> element.getAttribute("focusable").equals("true"));
+            element.clear();
+            element.sendKeys(text);
+            LogsManager.info("Typed text '" + text + "' into element: " + locator);
+        } catch (Exception e) {
+            LogsManager.error("Failed to type into element: " + locator, e.getMessage());
+            throw new RuntimeException("Unable to type text into: " + locator, e);
+        }
     }
 
     //getting text

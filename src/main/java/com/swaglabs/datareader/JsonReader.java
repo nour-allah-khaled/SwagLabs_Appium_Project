@@ -8,8 +8,8 @@ import org.json.simple.parser.JSONParser;
 import java.io.FileReader;
 
 public class JsonReader {
-    private final String TEST_DATA_PATH = "src/test/resources/Test_Data/";
-    String jsonReader;
+    private final String TEST_DATA_PATH = "src/test/java/resources/Test_Data/";
+    static String jsonReader;
     String jsonFileName;
     public JsonReader(String jsonFileName) {
         this.jsonFileName = jsonFileName;

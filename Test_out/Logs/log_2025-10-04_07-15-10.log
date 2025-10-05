@@ -1,0 +1,3 @@
+[ERROR] 04-10-2025 07:15:10 [main] [com.swaglabs.datareader.JsonReader] - Error reading json file for path: userName json string can not be null or empty
+[ERROR] 04-10-2025 07:15:10 [main] [com.swaglabs.datareader.JsonReader] - Error reading json file for path: password json string can not be null or empty
+[ERROR] 04-10-2025 07:15:11 [main] [com.swaglabs.android.DriverManager] - Error initializing driver:  Cannot parse null string
