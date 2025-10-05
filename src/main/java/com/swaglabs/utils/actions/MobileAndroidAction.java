@@ -9,9 +9,13 @@ import io.appium.java_client.touch.offset.ElementOption;
 import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.PointerInput;
+import org.openqa.selenium.interactions.Sequence;
 
 import java.time.Duration;
+import java.util.Collections;
 
 
 public class MobileAndroidAction {
@@ -22,9 +26,15 @@ public class MobileAndroidAction {
     // Tap action
     public void tap(By locator) {
         WebElement element = driver.findElement(locator);
-        new TouchAction<>((PerformsTouchActions) driver)
-                .tap(ElementOption.element(element))
-                .perform();
+        Point point = element.getLocation();
+
+        PointerInput finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
+        Sequence tap = new Sequence(finger, 1)
+                .addAction(finger.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), point.x + 5, point.y + 5))
+                .addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()))
+                .addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+
+        driver.perform(Collections.singletonList(tap));
         LogsManager.info("Tapped on element: " + locator);
     }
 

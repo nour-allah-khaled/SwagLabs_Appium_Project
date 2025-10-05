@@ -6,11 +6,12 @@ import com.swaglabs.pages.Page01_Login;
 import org.testng.annotations.Test;
 
 public class TC01_Login extends BaseClass {
-    private static final String UserName = JsonReader.getJsonData("userName");
-    private static final String Password = JsonReader.getJsonData("password");
+    private final String UserName = JsonReader.getJsonData("userName");
+    private final String password = JsonReader.getJsonData("password");
     @Test
     public void LoginTest(){
+        // Get test data using the inherited jsonReader from BaseClass
         new Page01_Login(DriverManager.getDriver()).userName(UserName)
-                .passWord(Password).loginBtn().assertLogin();
+                .passWord(password).loginBtn().assertLogin();
     }
 }

@@ -11,8 +11,7 @@ public class Page01_Login {
     private final By username = AppiumBy.accessibilityId("test-Username");
     private final By password = AppiumBy.accessibilityId("test-Password");
     private final By loginBtn = AppiumBy.accessibilityId("test-LOGIN");
-    private final By ClickUsernam = AppiumBy.xpath("//android.widget.TextView[@text=\"standard_user\"]\n");
-    private final By getInvalidMsg = AppiumBy.xpath("//android.widget.TextView[@text=\"Username and password do not match any user in this service.\"]\n");
+    private final By getInvalidMsg = AppiumBy.xpath("//android.widget.TextView[@text=\"Username and password do not match any user in this service.\"]");
     private final By getEmptyMsg = AppiumBy.xpath("//android.widget.TextView[@text=\"Username is required\"]");
     private final By GetHomePage = AppiumBy.xpath("//android.widget.TextView[@text=\"PRODUCTS\"]");
     public Page01_Login(AndroidDriver driver) {
@@ -31,11 +30,6 @@ public class Page01_Login {
     public Page01_Login loginBtn() {
         DriverManager.getElementAction().clicking(this.loginBtn);
         return this;
-    }
-    public Page02_Home clickUsernam() {
-        DriverManager.getElementAction().scrollToElement(this.ClickUsernam);
-        DriverManager.getElementAction().clicking(this.loginBtn);
-        return new Page02_Home(driver);
     }
     //Assertion methods can be added here
     public Page02_Home assertLogin(){

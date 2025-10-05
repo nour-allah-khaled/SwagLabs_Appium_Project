@@ -2,7 +2,6 @@ package com.swaglabs.utils;
 
 import com.swaglabs.datareader.PropertyReader;
 import io.appium.java_client.android.AndroidDriver;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.FluentWait;
 
 import java.time.Duration;
@@ -13,7 +12,6 @@ public class WaitManager {
     public WaitManager(AndroidDriver driver) {
         this.driver = driver;
     }
-
     public FluentWait<AndroidDriver> fluentWait() {
         return new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(Long.parseLong(PropertyReader.getProperty("androidAppWaitTime"))))

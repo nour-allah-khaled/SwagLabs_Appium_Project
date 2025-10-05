@@ -1,0 +1,14 @@
+[ERROR] 05-10-2025 07:09:05 [main] [com.swaglabs.datareader.JsonReader] - Error reading json file for path: userName json string can not be null or empty
+[ERROR] 05-10-2025 07:09:05 [main] [com.swaglabs.datareader.JsonReader] - Error reading json file for path: password json string can not be null or empty
+[INFO] 05-10-2025 07:09:09 [main] [com.swaglabs.android.DriverManager] - Appium service started.
+[INFO] 05-10-2025 07:09:20 [main] [com.swaglabs.android.DriverManager] - Driver initialized for platform: null
+[INFO] 05-10-2025 07:09:23 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-Username
+[ERROR] 05-10-2025 07:09:23 [main] [com.swaglabs.utils.actions.ElementAction] - Failed to type into element: AppiumBy.accessibilityId: test-Username The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [7d4a0ffe-35c4-42a9-b5c3-3b7349753326, performTouchAction {actions=[{action=tap, options={element=00000000-0000-0236-ffff-ffff0000002b}}]}]
+Capabilities {appium:app: src/test/java/resources/And..., appium:appActivity: com.swaglabsmobileapp.MainA..., appium:appPackage: com.swaglabsmobileapp, appium:appWaitDuration: 20000, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: src/test/java/resources/And..., appActivity: com.swaglabsmobileapp.MainA..., appPackage: com.swaglabsmobileapp, appWaitDuration: 20000, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: TestEmulatorApp, noReset: false, platformName: ANDROID}, appium:deviceApiLevel: 36, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2220, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: false, appium:pixelRatio: 2.75, appium:platformVersion: 16, appium:statBarHeight: 66, appium:takesScreenshot: true, appium:viewportRect: {height: 2154, left: 0, top: 66, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: 7d4a0ffe-35c4-42a9-b5c3-3b7349753326
+[INFO] 05-10-2025 07:09:23 [main] [com.swaglabs.android.DriverManager] - Driver quit successfully
+[INFO] 05-10-2025 07:09:24 [main] [com.swaglabs.android.DriverManager] - Appium server stopped successfully

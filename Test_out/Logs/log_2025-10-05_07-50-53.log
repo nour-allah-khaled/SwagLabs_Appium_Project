@@ -1,0 +1,19 @@
+[ERROR] 05-10-2025 07:50:53 [main] [com.swaglabs.datareader.JsonReader] - Error reading json file for path: userName json string can not be null or empty
+[ERROR] 05-10-2025 07:50:53 [main] [com.swaglabs.datareader.JsonReader] - Error reading json file for path: password json string can not be null or empty
+[INFO] 05-10-2025 07:51:01 [main] [com.swaglabs.android.DriverManager] - Appium service started.
+[INFO] 05-10-2025 07:51:23 [main] [com.swaglabs.android.DriverManager] - Driver initialized for platform: null
+[INFO] 05-10-2025 07:51:27 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-Username
+[INFO] 05-10-2025 07:51:27 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element to focus: AppiumBy.accessibilityId: test-Username
+[INFO] 05-10-2025 07:51:27 [main] [com.swaglabs.utils.actions.ElementAction] - Element is focused: AppiumBy.accessibilityId: test-Username
+[INFO] 05-10-2025 07:51:28 [main] [com.swaglabs.utils.actions.ElementAction] - Cleared existing text in element: AppiumBy.accessibilityId: test-Username
+[INFO] 05-10-2025 07:51:31 [main] [com.swaglabs.utils.actions.ElementAction] - Typed text using sendKeys(): 
+[INFO] 05-10-2025 07:51:32 [main] [com.swaglabs.utils.actions.ElementAction] - Verified text is entered successfully in: AppiumBy.accessibilityId: test-Username
+[INFO] 05-10-2025 07:51:33 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-Password
+[INFO] 05-10-2025 07:51:34 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element to focus: AppiumBy.accessibilityId: test-Password
+[INFO] 05-10-2025 07:51:35 [main] [com.swaglabs.utils.actions.ElementAction] - Element is focused: AppiumBy.accessibilityId: test-Password
+[INFO] 05-10-2025 07:51:35 [main] [com.swaglabs.utils.actions.ElementAction] - Cleared existing text in element: AppiumBy.accessibilityId: test-Password
+[INFO] 05-10-2025 07:51:36 [main] [com.swaglabs.utils.actions.ElementAction] - Typed text using sendKeys(): 
+[INFO] 05-10-2025 07:51:37 [main] [com.swaglabs.utils.actions.ElementAction] - Verified text is entered successfully in: AppiumBy.accessibilityId: test-Password
+[INFO] 05-10-2025 07:51:37 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-LOGIN
+[INFO] 05-10-2025 07:51:59 [main] [com.swaglabs.android.DriverManager] - Driver quit successfully
+[INFO] 05-10-2025 07:51:59 [main] [com.swaglabs.android.DriverManager] - Appium server stopped successfully

@@ -1,0 +1,17 @@
+[INFO] 05-10-2025 08:28:39 [main] [com.swaglabs.android.DriverManager] - Appium service started.
+[INFO] 05-10-2025 08:29:34 [main] [com.swaglabs.android.DriverManager] - Driver initialized for platform: ANDROID
+[INFO] 05-10-2025 08:29:36 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-Username
+[INFO] 05-10-2025 08:29:37 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element to focus: AppiumBy.accessibilityId: test-Username
+[INFO] 05-10-2025 08:29:38 [main] [com.swaglabs.utils.actions.ElementAction] - Element is focused: AppiumBy.accessibilityId: test-Username
+[INFO] 05-10-2025 08:29:38 [main] [com.swaglabs.utils.actions.ElementAction] - Cleared existing text in element: AppiumBy.accessibilityId: test-Username
+[INFO] 05-10-2025 08:29:40 [main] [com.swaglabs.utils.actions.ElementAction] - Typed text using sendKeys(): standard_user
+[INFO] 05-10-2025 08:29:40 [main] [com.swaglabs.utils.actions.ElementAction] - Verified text is entered successfully in: AppiumBy.accessibilityId: test-Username
+[INFO] 05-10-2025 08:29:42 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-Password
+[INFO] 05-10-2025 08:29:45 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element to focus: AppiumBy.accessibilityId: test-Password
+[INFO] 05-10-2025 08:29:45 [main] [com.swaglabs.utils.actions.ElementAction] - Element is focused: AppiumBy.accessibilityId: test-Password
+[INFO] 05-10-2025 08:29:45 [main] [com.swaglabs.utils.actions.ElementAction] - Cleared existing text in element: AppiumBy.accessibilityId: test-Password
+[INFO] 05-10-2025 08:29:50 [main] [com.swaglabs.utils.actions.ElementAction] - Typed text using sendKeys(): secret_sauce
+[INFO] 05-10-2025 08:29:50 [main] [com.swaglabs.utils.actions.ElementAction] - Verified text is entered successfully in: AppiumBy.accessibilityId: test-Password
+[INFO] 05-10-2025 08:29:52 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-LOGIN
+[INFO] 05-10-2025 08:29:59 [main] [com.swaglabs.utils.actions.ElementAction] - Got text 'PRODUCTS' from element: By.xpath: //android.widget.TextView[@text="PRODUCTS"]
+[INFO] 05-10-2025 08:30:07 [main] [com.swaglabs.android.DriverManager] - Driver quit successfully
