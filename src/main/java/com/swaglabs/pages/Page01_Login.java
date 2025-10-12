@@ -3,11 +3,12 @@ package com.swaglabs.pages;
 import com.swaglabs.utils.actions.ElementAction;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import com.swaglabs.android.DriverManager;
 
 public class Page01_Login {
-    private AndroidDriver driver;
+    private final AndroidDriver driver;
     private final By username = AppiumBy.accessibilityId("test-Username");
     private final By password = AppiumBy.accessibilityId("test-Password");
     private final By loginBtn = AppiumBy.accessibilityId("test-LOGIN");
@@ -17,16 +18,19 @@ public class Page01_Login {
     public Page01_Login(AndroidDriver driver) {
         this.driver=driver;
     }
+    @Step("Entering username: {username}")
     public Page01_Login userName(String username) {
         DriverManager.getElementAction().clicking(this.username);
         DriverManager.getElementAction().sendkeys(this.username, username);
         return this;
     }
+    @Step("Entering password: {password}")
     public Page01_Login passWord(String password) {
         DriverManager.getElementAction().clicking(this.password);
         DriverManager.getElementAction().sendkeys(this.password, password);
         return this;
     }
+    @Step("Clicking on login button")
     public Page01_Login loginBtn() {
         DriverManager.getElementAction().clicking(this.loginBtn);
         return this;

@@ -1,0 +1,12 @@
+[INFO] 10-10-2025 13:26:29 [main] [com.swaglabs.android.DriverManager] - Appium service started.
+[INFO] 10-10-2025 13:26:42 [main] [com.swaglabs.android.DriverManager] - Driver initialized for platform: null
+[INFO] 10-10-2025 13:26:44 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-Username
+[INFO] 10-10-2025 13:26:45 [main] [com.swaglabs.utils.actions.ElementAction] - Focused on element: AppiumBy.accessibilityId: test-Username
+[INFO] 10-10-2025 13:26:47 [main] [com.swaglabs.utils.actions.ElementAction] - Typed text 'standard_user' into element: AppiumBy.accessibilityId: test-Username
+[INFO] 10-10-2025 13:26:49 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-Password
+[INFO] 10-10-2025 13:26:50 [main] [com.swaglabs.utils.actions.ElementAction] - Focused on element: AppiumBy.accessibilityId: test-Password
+[INFO] 10-10-2025 13:26:51 [main] [com.swaglabs.utils.actions.ElementAction] - Typed text 'secret_sauce' into element: AppiumBy.accessibilityId: test-Password
+[INFO] 10-10-2025 13:26:52 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-LOGIN
+[INFO] 10-10-2025 13:26:53 [main] [com.swaglabs.utils.actions.ElementAction] - Got text 'PRODUCTS' from element: By.xpath: //android.widget.TextView[@text="PRODUCTS"]
+[INFO] 10-10-2025 13:26:54 [main] [com.swaglabs.android.DriverManager] - Driver quit successfully
+[INFO] 10-10-2025 13:26:54 [main] [com.swaglabs.android.DriverManager] - Appium server stopped successfully

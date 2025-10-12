@@ -1,4 +1,16 @@
 {
   "userName": "standard_user",
-  "password": "secret_sauce"
+  "password": "secret_sauce",
+  "emptyUsername": "",
+  "emptyPassword": "",
+  "invalidUsername": "invalid_user",
+  "invalidPassword": "invalid_pass",
+  "Product": {
+    "Product1": "Sauce Labs Backpack",
+    "Product2": "Sauce Labs Bike Light",
+    "Product3": "Sauce Labs Bolt T-Shirt",
+    "Product4": "Sauce Labs Fleece Jacket",
+    "Product5": "Sauce Labs Onesie",
+    "Product6": "Test.allTheThings() T-Shirt (Red)"
+  }
 }

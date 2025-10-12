@@ -3,13 +3,21 @@ package com.swaglabs.utils.actions;
 import com.swaglabs.android.DriverManager;
 import com.swaglabs.utils.WaitManager;
 import com.swaglabs.utils.logs.LogsManager;
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.touch.offset.ElementOption;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.PointerInput;
+import org.openqa.selenium.interactions.Sequence;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
+import java.util.Arrays;
 import java.util.List;
 
 public class ElementAction {
@@ -108,26 +116,5 @@ public class ElementAction {
             LogsManager.info("Swipe down attempt " + (i + 1) + " to find: " + locator);
         }
         throw new RuntimeException("Element not found after scrolling: " + locator);
-    }
-
-    //Drag and Drop
-    public void dragAndDrop(By sourceLocator, By targetLocator) {
-        wait.fluentWait().until(
-                d -> {
-                    try {
-                        WebElement source = driver.findElement(sourceLocator);
-                        WebElement target = driver.findElement(targetLocator);
-                        new TouchAction<>((PerformsTouchActions) driver).
-                                longPress(ElementOption.element(source))
-                                .moveTo(ElementOption.element(target))
-                                .release()
-                                .perform();
-                        LogsManager.info("Dragged element " + sourceLocator + " and dropped to " + targetLocator);
-                        return true;
-                    } catch (Exception e) {
-                        return false;
-                    }
-                }
-        );
     }
 }

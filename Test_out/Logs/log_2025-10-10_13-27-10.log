@@ -1,0 +1,47 @@
+[INFO] 10-10-2025 13:27:10 [main] [com.swaglabs.android.DriverManager] - Appium service started.
+[INFO] 10-10-2025 13:27:21 [main] [com.swaglabs.android.DriverManager] - Driver initialized for platform: null
+[INFO] 10-10-2025 13:27:23 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-Username
+[INFO] 10-10-2025 13:27:24 [main] [com.swaglabs.utils.actions.ElementAction] - Focused on element: AppiumBy.accessibilityId: test-Username
+[INFO] 10-10-2025 13:27:25 [main] [com.swaglabs.utils.actions.ElementAction] - Typed text 'standard_user' into element: AppiumBy.accessibilityId: test-Username
+[INFO] 10-10-2025 13:27:27 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-Password
+[INFO] 10-10-2025 13:27:28 [main] [com.swaglabs.utils.actions.ElementAction] - Focused on element: AppiumBy.accessibilityId: test-Password
+[INFO] 10-10-2025 13:27:29 [main] [com.swaglabs.utils.actions.ElementAction] - Typed text 'secret_sauce' into element: AppiumBy.accessibilityId: test-Password
+[INFO] 10-10-2025 13:27:30 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-LOGIN
+[INFO] 10-10-2025 13:27:31 [main] [com.swaglabs.utils.actions.ElementAction] - Got text 'PRODUCTS' from element: By.xpath: //android.widget.TextView[@text="PRODUCTS"]
+[INFO] 10-10-2025 13:27:32 [main] [com.swaglabs.android.DriverManager] - Driver quit successfully
+[INFO] 10-10-2025 13:27:32 [main] [com.swaglabs.android.DriverManager] - Appium server stopped successfully
+[INFO] 10-10-2025 13:27:35 [main] [com.swaglabs.android.DriverManager] - Appium service started.
+[INFO] 10-10-2025 13:27:45 [main] [com.swaglabs.android.DriverManager] - Driver initialized for platform: android
+[INFO] 10-10-2025 13:27:48 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-Username
+[INFO] 10-10-2025 13:27:49 [main] [com.swaglabs.utils.actions.ElementAction] - Focused on element: AppiumBy.accessibilityId: test-Username
+[INFO] 10-10-2025 13:27:50 [main] [com.swaglabs.utils.actions.ElementAction] - Typed text 'standard_user' into element: AppiumBy.accessibilityId: test-Username
+[INFO] 10-10-2025 13:27:52 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-Password
+[INFO] 10-10-2025 13:27:52 [main] [com.swaglabs.utils.actions.ElementAction] - Focused on element: AppiumBy.accessibilityId: test-Password
+[INFO] 10-10-2025 13:27:54 [main] [com.swaglabs.utils.actions.ElementAction] - Typed text '' into element: AppiumBy.accessibilityId: test-Password
+[INFO] 10-10-2025 13:27:54 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-LOGIN
+[INFO] 10-10-2025 13:28:16 [main] [com.swaglabs.android.DriverManager] - Driver quit successfully
+[INFO] 10-10-2025 13:28:16 [main] [com.swaglabs.android.DriverManager] - Appium server stopped successfully
+[INFO] 10-10-2025 13:28:20 [main] [com.swaglabs.android.DriverManager] - Appium service started.
+[INFO] 10-10-2025 13:28:29 [main] [com.swaglabs.android.DriverManager] - Driver initialized for platform: android
+[INFO] 10-10-2025 13:28:32 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-Username
+[INFO] 10-10-2025 13:28:33 [main] [com.swaglabs.utils.actions.ElementAction] - Focused on element: AppiumBy.accessibilityId: test-Username
+[INFO] 10-10-2025 13:28:33 [main] [com.swaglabs.utils.actions.ElementAction] - Typed text '' into element: AppiumBy.accessibilityId: test-Username
+[INFO] 10-10-2025 13:28:35 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-Password
+[INFO] 10-10-2025 13:28:35 [main] [com.swaglabs.utils.actions.ElementAction] - Focused on element: AppiumBy.accessibilityId: test-Password
+[INFO] 10-10-2025 13:28:37 [main] [com.swaglabs.utils.actions.ElementAction] - Typed text 'secret_sauce' into element: AppiumBy.accessibilityId: test-Password
+[INFO] 10-10-2025 13:28:37 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-LOGIN
+[INFO] 10-10-2025 13:28:38 [main] [com.swaglabs.utils.actions.ElementAction] - Got text 'Username is required' from element: By.xpath: //android.widget.TextView[@text="Username is required"]
+[INFO] 10-10-2025 13:28:39 [main] [com.swaglabs.android.DriverManager] - Driver quit successfully
+[INFO] 10-10-2025 13:28:39 [main] [com.swaglabs.android.DriverManager] - Appium server stopped successfully
+[INFO] 10-10-2025 13:28:43 [main] [com.swaglabs.android.DriverManager] - Appium service started.
+[INFO] 10-10-2025 13:28:51 [main] [com.swaglabs.android.DriverManager] - Driver initialized for platform: android
+[INFO] 10-10-2025 13:28:53 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-Username
+[INFO] 10-10-2025 13:28:54 [main] [com.swaglabs.utils.actions.ElementAction] - Focused on element: AppiumBy.accessibilityId: test-Username
+[INFO] 10-10-2025 13:28:55 [main] [com.swaglabs.utils.actions.ElementAction] - Typed text 'invalid_user' into element: AppiumBy.accessibilityId: test-Username
+[INFO] 10-10-2025 13:28:57 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-Password
+[INFO] 10-10-2025 13:28:57 [main] [com.swaglabs.utils.actions.ElementAction] - Focused on element: AppiumBy.accessibilityId: test-Password
+[INFO] 10-10-2025 13:28:59 [main] [com.swaglabs.utils.actions.ElementAction] - Typed text 'invalid_pass' into element: AppiumBy.accessibilityId: test-Password
+[INFO] 10-10-2025 13:29:00 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-LOGIN
+[INFO] 10-10-2025 13:29:01 [main] [com.swaglabs.utils.actions.ElementAction] - Got text 'Username and password do not match any user in this service.' from element: By.xpath: //android.widget.TextView[@text="Username and password do not match any user in this service."]
+[INFO] 10-10-2025 13:29:02 [main] [com.swaglabs.android.DriverManager] - Driver quit successfully
+[INFO] 10-10-2025 13:29:02 [main] [com.swaglabs.android.DriverManager] - Appium server stopped successfully
