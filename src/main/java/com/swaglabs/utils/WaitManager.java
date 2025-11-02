@@ -30,6 +30,15 @@ public class WaitManager {
         });
         LogsManager.info("Element is now visible: " + locator);
     }
+    public void waitForProductListToLoad(By locator) {
+        LogsManager.info("Waiting for product list to load: " + locator);
+        fluentWait().until(driver -> {
+            List<WebElement> elements = driver.findElements(locator);
+            return !elements.isEmpty() && elements.get(0).isDisplayed();
+        });
+        LogsManager.info("Product list loaded successfully: " + locator);
+    }
+
 
     private ArrayList<Class<? extends Exception>> Exceptionn() {
         ArrayList<Class<? extends Exception>> exceptions = new ArrayList<>();

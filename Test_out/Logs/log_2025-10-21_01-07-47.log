@@ -1,0 +1,22 @@
+[INFO] 21-10-2025 01:07:47 [main] [com.swaglabs.android.DriverManager] - Appium service started.
+[INFO] 21-10-2025 01:08:18 [main] [com.swaglabs.android.DriverManager] - Driver initialized for platform: null
+[INFO] 21-10-2025 01:08:19 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-Username
+[INFO] 21-10-2025 01:08:20 [main] [com.swaglabs.utils.actions.ElementAction] - Focused on element: AppiumBy.accessibilityId: test-Username
+[INFO] 21-10-2025 01:08:22 [main] [com.swaglabs.utils.actions.ElementAction] - Typed text 'standard_user' into element: AppiumBy.accessibilityId: test-Username
+[INFO] 21-10-2025 01:08:23 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-Password
+[INFO] 21-10-2025 01:08:24 [main] [com.swaglabs.utils.actions.ElementAction] - Focused on element: AppiumBy.accessibilityId: test-Password
+[INFO] 21-10-2025 01:08:25 [main] [com.swaglabs.utils.actions.ElementAction] - Typed text 'secret_sauce' into element: AppiumBy.accessibilityId: test-Password
+[INFO] 21-10-2025 01:08:25 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-LOGIN
+[INFO] 21-10-2025 01:08:27 [main] [com.swaglabs.utils.actions.ElementAction] - Got text 'PRODUCTS' from element: By.xpath: //android.widget.TextView[@text="PRODUCTS"]
+[INFO] 21-10-2025 01:08:27 [main] [tests.TC02_Home] - User logged in successfullyby enter username: standard_user and password: secret_sauce
+[INFO] 21-10-2025 01:08:27 [main] [com.swaglabs.utils.WaitManager] - Waiting for element to be visible: By.xpath: //android.widget.TextView[@text="Name (A to Z)"]
+[INFO] 21-10-2025 01:08:28 [main] [com.swaglabs.utils.WaitManager] - Element is now visible: By.xpath: //android.widget.TextView[@text="Name (A to Z)"]
+[INFO] 21-10-2025 01:08:28 [main] [com.swaglabs.utils.WaitManager] - Waiting for element to be visible: By.xpath: //android.widget.TextView[@text="Name (Z to A)"]
+[INFO] 21-10-2025 01:08:28 [main] [com.swaglabs.utils.WaitManager] - Element is now visible: By.xpath: //android.widget.TextView[@text="Name (Z to A)"]
+[INFO] 21-10-2025 01:08:28 [main] [com.swaglabs.utils.WaitManager] - Waiting for element to be visible: By.xpath: //android.widget.TextView[@text="Price (low to high)"]
+[INFO] 21-10-2025 01:08:28 [main] [com.swaglabs.utils.WaitManager] - Element is now visible: By.xpath: //android.widget.TextView[@text="Price (low to high)"]
+[INFO] 21-10-2025 01:08:28 [main] [com.swaglabs.utils.WaitManager] - Waiting for element to be visible: By.xpath: //android.widget.TextView[@text="Price (high to low)"]
+[INFO] 21-10-2025 01:08:28 [main] [com.swaglabs.utils.WaitManager] - Element is now visible: By.xpath: //android.widget.TextView[@text="Price (high to low)"]
+[INFO] 21-10-2025 01:08:28 [main] [com.swaglabs.utils.WaitManager] - Waiting for product list to load: AppiumBy.id: com.swaglabsmobileapp:id/item_name
+[INFO] 21-10-2025 01:08:49 [main] [com.swaglabs.android.DriverManager] - Driver quit successfully
+[INFO] 21-10-2025 01:08:49 [main] [com.swaglabs.android.DriverManager] - Appium server stopped successfully

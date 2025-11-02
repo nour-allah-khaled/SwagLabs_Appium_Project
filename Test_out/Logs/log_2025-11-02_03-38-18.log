@@ -1,0 +1,34 @@
+[INFO] 02-11-2025 03:38:18 [main] [com.swaglabs.android.DriverManager] - Appium service started.
+[INFO] 02-11-2025 03:38:27 [main] [com.swaglabs.android.DriverManager] - Driver initialized for platform: null
+[INFO] 02-11-2025 03:38:30 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-Username
+[INFO] 02-11-2025 03:38:30 [main] [com.swaglabs.utils.actions.ElementAction] - Focused on element: AppiumBy.accessibilityId: test-Username
+[INFO] 02-11-2025 03:38:32 [main] [com.swaglabs.utils.actions.ElementAction] - Typed text 'standard_user' into element: AppiumBy.accessibilityId: test-Username
+[INFO] 02-11-2025 03:38:34 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-Password
+[INFO] 02-11-2025 03:38:34 [main] [com.swaglabs.utils.actions.ElementAction] - Focused on element: AppiumBy.accessibilityId: test-Password
+[INFO] 02-11-2025 03:38:35 [main] [com.swaglabs.utils.actions.ElementAction] - Typed text 'secret_sauce' into element: AppiumBy.accessibilityId: test-Password
+[INFO] 02-11-2025 03:38:36 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-LOGIN
+[INFO] 02-11-2025 03:38:37 [main] [com.swaglabs.utils.actions.ElementAction] - Got text 'PRODUCTS' from element: By.xpath: //android.widget.TextView[@text="PRODUCTS"]
+[INFO] 02-11-2025 03:38:37 [main] [tests.TC02_Home] - User logged in successfullyby enter username: standard_user and password: secret_sauce
+[INFO] 02-11-2025 03:38:38 [main] [com.swaglabs.utils.WaitManager] - Waiting for element to be visible: By.xpath: //android.widget.TextView[@text="Name (A to Z)"]
+[INFO] 02-11-2025 03:38:39 [main] [com.swaglabs.utils.WaitManager] - Element is now visible: By.xpath: //android.widget.TextView[@text="Name (A to Z)"]
+[INFO] 02-11-2025 03:38:39 [main] [com.swaglabs.utils.WaitManager] - Waiting for element to be visible: By.xpath: //android.widget.TextView[@text="Name (Z to A)"]
+[INFO] 02-11-2025 03:38:39 [main] [com.swaglabs.utils.WaitManager] - Element is now visible: By.xpath: //android.widget.TextView[@text="Name (Z to A)"]
+[INFO] 02-11-2025 03:38:39 [main] [com.swaglabs.utils.WaitManager] - Waiting for element to be visible: By.xpath: //android.widget.TextView[@text="Price (low to high)"]
+[INFO] 02-11-2025 03:38:39 [main] [com.swaglabs.utils.WaitManager] - Element is now visible: By.xpath: //android.widget.TextView[@text="Price (low to high)"]
+[INFO] 02-11-2025 03:38:39 [main] [com.swaglabs.utils.WaitManager] - Waiting for element to be visible: By.xpath: //android.widget.TextView[@text="Price (high to low)"]
+[INFO] 02-11-2025 03:38:39 [main] [com.swaglabs.utils.WaitManager] - Element is now visible: By.xpath: //android.widget.TextView[@text="Price (high to low)"]
+[INFO] 02-11-2025 03:38:39 [main] [com.swaglabs.utils.WaitManager] - Waiting for product list to load: By.xpath: .//android.widget.TextView[@content-desc='test-Item title']
+[INFO] 02-11-2025 03:38:40 [main] [com.swaglabs.utils.WaitManager] - Product list loaded successfully: By.xpath: .//android.widget.TextView[@content-desc='test-Item title']
+[INFO] 02-11-2025 03:38:40 [main] [com.swaglabs.pages.Page02_Home] - Filtered products by: Price (high to low)
+[INFO] 02-11-2025 03:38:40 [main] [com.swaglabs.pages.Page02_Home] - Product prices list: [49.99, 29.99]
+[INFO] 02-11-2025 03:38:40 [main] [com.swaglabs.pages.Page02_Home] - Verified products are sorted by Price (High to Low)
+[INFO] 02-11-2025 03:38:40 [main] [com.swaglabs.pages.Page02_Home] - Starting to add products to cart: [Sauce Labs Fleece Jacket, Sauce Labs Backpack]
+[INFO] 02-11-2025 03:38:40 [main] [com.swaglabs.pages.Page02_Home] - Scroll attempt 1 - Products remaining: [Sauce Labs Fleece Jacket, Sauce Labs Backpack]
+[INFO] 02-11-2025 03:38:40 [main] [com.swaglabs.pages.Page02_Home] - Currently visible products: [Sauce Labs Fleece Jacket, Sauce Labs Backpack]
+[INFO] 02-11-2025 03:38:41 [main] [com.swaglabs.pages.Page02_Home] - Successfully added product to cart: Sauce Labs Fleece Jacket
+[INFO] 02-11-2025 03:38:41 [main] [com.swaglabs.pages.Page02_Home] - Successfully added product to cart: Sauce Labs Backpack
+[INFO] 02-11-2025 03:38:41 [main] [com.swaglabs.pages.Page02_Home] - Successfully added products: [Sauce Labs Fleece Jacket, Sauce Labs Backpack]
+[INFO] 02-11-2025 03:38:43 [main] [com.swaglabs.utils.actions.ElementAction] - Got text 'YOUR CART' from element: AppiumBy.androidUIAutomator: new UiSelector().text("YOUR CART")
+[INFO] 02-11-2025 03:38:43 [main] [tests.TC02_Home] - The products sorted by Price from high to low successfully and added to the cart and navigate to the cart page
+[INFO] 02-11-2025 03:38:44 [main] [com.swaglabs.android.DriverManager] - Driver quit successfully
+[INFO] 02-11-2025 03:38:44 [main] [com.swaglabs.android.DriverManager] - Appium server stopped successfully

@@ -1,0 +1,77 @@
+[INFO] 21-10-2025 01:40:59 [main] [com.swaglabs.android.DriverManager] - Appium service started.
+[INFO] 21-10-2025 01:41:11 [main] [com.swaglabs.android.DriverManager] - Driver initialized for platform: null
+[INFO] 21-10-2025 01:41:13 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-Username
+[INFO] 21-10-2025 01:41:13 [main] [com.swaglabs.utils.actions.ElementAction] - Focused on element: AppiumBy.accessibilityId: test-Username
+[INFO] 21-10-2025 01:41:16 [main] [com.swaglabs.utils.actions.ElementAction] - Typed text 'standard_user' into element: AppiumBy.accessibilityId: test-Username
+[INFO] 21-10-2025 01:41:17 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-Password
+[INFO] 21-10-2025 01:41:18 [main] [com.swaglabs.utils.actions.ElementAction] - Focused on element: AppiumBy.accessibilityId: test-Password
+[INFO] 21-10-2025 01:41:19 [main] [com.swaglabs.utils.actions.ElementAction] - Typed text 'secret_sauce' into element: AppiumBy.accessibilityId: test-Password
+[INFO] 21-10-2025 01:41:20 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-LOGIN
+[INFO] 21-10-2025 01:41:21 [main] [com.swaglabs.utils.actions.ElementAction] - Got text 'PRODUCTS' from element: By.xpath: //android.widget.TextView[@text="PRODUCTS"]
+[INFO] 21-10-2025 01:41:21 [main] [tests.TC02_Home] - User logged in successfullyby enter username: standard_user and password: secret_sauce
+[INFO] 21-10-2025 01:41:21 [main] [com.swaglabs.utils.WaitManager] - Waiting for element to be visible: By.xpath: //android.widget.TextView[@text="Name (A to Z)"]
+[INFO] 21-10-2025 01:41:22 [main] [com.swaglabs.utils.WaitManager] - Element is now visible: By.xpath: //android.widget.TextView[@text="Name (A to Z)"]
+[INFO] 21-10-2025 01:41:22 [main] [com.swaglabs.utils.WaitManager] - Waiting for element to be visible: By.xpath: //android.widget.TextView[@text="Name (Z to A)"]
+[INFO] 21-10-2025 01:41:22 [main] [com.swaglabs.utils.WaitManager] - Element is now visible: By.xpath: //android.widget.TextView[@text="Name (Z to A)"]
+[INFO] 21-10-2025 01:41:22 [main] [com.swaglabs.utils.WaitManager] - Waiting for element to be visible: By.xpath: //android.widget.TextView[@text="Price (low to high)"]
+[INFO] 21-10-2025 01:41:22 [main] [com.swaglabs.utils.WaitManager] - Element is now visible: By.xpath: //android.widget.TextView[@text="Price (low to high)"]
+[INFO] 21-10-2025 01:41:22 [main] [com.swaglabs.utils.WaitManager] - Waiting for element to be visible: By.xpath: //android.widget.TextView[@text="Price (high to low)"]
+[INFO] 21-10-2025 01:41:22 [main] [com.swaglabs.utils.WaitManager] - Element is now visible: By.xpath: //android.widget.TextView[@text="Price (high to low)"]
+[INFO] 21-10-2025 01:41:22 [main] [com.swaglabs.utils.WaitManager] - Waiting for product list to load: By.xpath: .//android.widget.TextView[@content-desc='test-Item title']
+[INFO] 21-10-2025 01:41:23 [main] [com.swaglabs.utils.WaitManager] - Product list loaded successfully: By.xpath: .//android.widget.TextView[@content-desc='test-Item title']
+[INFO] 21-10-2025 01:41:23 [main] [com.swaglabs.pages.Page02_Home] - Filtered products by: Name (A to Z)
+[INFO] 21-10-2025 01:41:23 [main] [com.swaglabs.utils.WaitManager] - Waiting for element to be visible: By.xpath: //android.view.ViewGroup[@content-desc='test-Item']
+[INFO] 21-10-2025 01:41:23 [main] [com.swaglabs.utils.WaitManager] - Element is now visible: By.xpath: //android.view.ViewGroup[@content-desc='test-Item']
+[INFO] 21-10-2025 01:41:23 [main] [com.swaglabs.pages.Page02_Home] - Number of products found: 4
+[INFO] 21-10-2025 01:41:23 [main] [com.swaglabs.utils.actions.ElementAction] - Scrolling to find element: By.xpath: .//android.widget.TextView[@content-desc='test-Item title']
+[INFO] 21-10-2025 01:41:23 [main] [com.swaglabs.utils.actions.ElementAction] - Element is visible after 1 scrolls: By.xpath: .//android.widget.TextView[@content-desc='test-Item title']
+[INFO] 21-10-2025 01:41:23 [main] [com.swaglabs.pages.Page02_Home] - Product name found: Sauce Labs Backpack
+[INFO] 21-10-2025 01:41:23 [main] [com.swaglabs.utils.actions.ElementAction] - Scrolling to find element: By.xpath: .//android.widget.TextView[@content-desc='test-Item title']
+[INFO] 21-10-2025 01:41:23 [main] [com.swaglabs.utils.actions.ElementAction] - Element is visible after 1 scrolls: By.xpath: .//android.widget.TextView[@content-desc='test-Item title']
+[INFO] 21-10-2025 01:41:23 [main] [com.swaglabs.pages.Page02_Home] - Product name found: Sauce Labs Bike Light
+[INFO] 21-10-2025 01:41:23 [main] [com.swaglabs.utils.actions.ElementAction] - Scrolling to find element: By.xpath: .//android.widget.TextView[@content-desc='test-Item title']
+[INFO] 21-10-2025 01:41:23 [main] [com.swaglabs.utils.actions.ElementAction] - Element is visible after 1 scrolls: By.xpath: .//android.widget.TextView[@content-desc='test-Item title']
+[ERROR] 21-10-2025 01:41:24 [main] [com.swaglabs.pages.Page02_Home] - Could not find product name inside product: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [cbdad439-e6f1-4c98-be83-11e84bf635eb, findChildElement {id=00000000-0000-00d7-ffff-ffff0000006c, using=xpath, value=.//android.widget.TextView[@content-desc='test-Item title']}]
+Capabilities {appium:app: src/test/java/resources/And..., appium:appActivity: com.swaglabsmobileapp.MainA..., appium:appPackage: com.swaglabsmobileapp, appium:appWaitDuration: 20000, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: src/test/java/resources/And..., appActivity: com.swaglabsmobileapp.MainA..., appPackage: com.swaglabsmobileapp, appWaitDuration: 20000, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: TestEmulatorApp, noReset: false, platformName: ANDROID}, appium:deviceApiLevel: 36, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2220, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: false, appium:pixelRatio: 2.75, appium:platformVersion: 16, appium:statBarHeight: 66, appium:takesScreenshot: true, appium:viewportRect: {height: 2154, left: 0, top: 66, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: cbdad439-e6f1-4c98-be83-11e84bf635eb
+[INFO] 21-10-2025 01:41:24 [main] [com.swaglabs.utils.actions.ElementAction] - Scrolling to find element: By.xpath: .//android.widget.TextView[@content-desc='test-Item title']
+[INFO] 21-10-2025 01:41:24 [main] [com.swaglabs.utils.actions.ElementAction] - Element is visible after 1 scrolls: By.xpath: .//android.widget.TextView[@content-desc='test-Item title']
+[ERROR] 21-10-2025 01:41:24 [main] [com.swaglabs.pages.Page02_Home] - Could not find product name inside product: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [cbdad439-e6f1-4c98-be83-11e84bf635eb, findChildElement {id=00000000-0000-00d7-ffff-ffff00000077, using=xpath, value=.//android.widget.TextView[@content-desc='test-Item title']}]
+Capabilities {appium:app: src/test/java/resources/And..., appium:appActivity: com.swaglabsmobileapp.MainA..., appium:appPackage: com.swaglabsmobileapp, appium:appWaitDuration: 20000, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: src/test/java/resources/And..., appActivity: com.swaglabsmobileapp.MainA..., appPackage: com.swaglabsmobileapp, appWaitDuration: 20000, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: TestEmulatorApp, noReset: false, platformName: ANDROID}, appium:deviceApiLevel: 36, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2220, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: false, appium:pixelRatio: 2.75, appium:platformVersion: 16, appium:statBarHeight: 66, appium:takesScreenshot: true, appium:viewportRect: {height: 2154, left: 0, top: 66, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: cbdad439-e6f1-4c98-be83-11e84bf635eb
+[INFO] 21-10-2025 01:41:24 [main] [com.swaglabs.pages.Page02_Home] - Product names list: [Sauce Labs Backpack, Sauce Labs Bike Light]
+[INFO] 21-10-2025 01:41:24 [main] [com.swaglabs.pages.Page02_Home] - Verified products are sorted by Name (A to Z)
+[ERROR] 21-10-2025 01:41:24 [main] [com.swaglabs.datareader.JsonReader] - Error reading json file for path: $Product.Product1 Illegal character at position 1 expected '.' or '['
+[ERROR] 21-10-2025 01:41:24 [main] [com.swaglabs.datareader.JsonReader] - Error reading json file for path: $Product.Product2 Illegal character at position 1 expected '.' or '['
+[ERROR] 21-10-2025 01:41:24 [main] [com.swaglabs.datareader.JsonReader] - Error reading json file for path: $Product.Product3 Illegal character at position 1 expected '.' or '['
+[ERROR] 21-10-2025 01:41:24 [main] [com.swaglabs.datareader.JsonReader] - Error reading json file for path: $Product.Product4 Illegal character at position 1 expected '.' or '['
+[INFO] 21-10-2025 01:41:24 [main] [com.swaglabs.utils.WaitManager] - Waiting for element to be visible: By.xpath: //android.view.ViewGroup[@content-desc='test-Item']
+[INFO] 21-10-2025 01:41:24 [main] [com.swaglabs.utils.WaitManager] - Element is now visible: By.xpath: //android.view.ViewGroup[@content-desc='test-Item']
+[INFO] 21-10-2025 01:41:24 [main] [com.swaglabs.pages.Page02_Home] - Exception while finding product: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [cbdad439-e6f1-4c98-be83-11e84bf635eb, findChildElement {id=00000000-0000-00d7-ffff-ffff0000006c, using=xpath, value=.//android.widget.TextView[@content-desc='test-Item title']}]
+Capabilities {appium:app: src/test/java/resources/And..., appium:appActivity: com.swaglabsmobileapp.MainA..., appium:appPackage: com.swaglabsmobileapp, appium:appWaitDuration: 20000, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: src/test/java/resources/And..., appActivity: com.swaglabsmobileapp.MainA..., appPackage: com.swaglabsmobileapp, appWaitDuration: 20000, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: TestEmulatorApp, noReset: false, platformName: ANDROID}, appium:deviceApiLevel: 36, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2220, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: false, appium:pixelRatio: 2.75, appium:platformVersion: 16, appium:statBarHeight: 66, appium:takesScreenshot: true, appium:viewportRect: {height: 2154, left: 0, top: 66, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: cbdad439-e6f1-4c98-be83-11e84bf635eb
+[INFO] 21-10-2025 01:41:24 [main] [com.swaglabs.pages.Page02_Home] - Exception while finding product: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.13.0', revision: 'ba948ece5b*'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [cbdad439-e6f1-4c98-be83-11e84bf635eb, findChildElement {id=00000000-0000-00d7-ffff-ffff00000077, using=xpath, value=.//android.widget.TextView[@content-desc='test-Item title']}]
+Capabilities {appium:app: src/test/java/resources/And..., appium:appActivity: com.swaglabsmobileapp.MainA..., appium:appPackage: com.swaglabsmobileapp, appium:appWaitDuration: 20000, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: src/test/java/resources/And..., appActivity: com.swaglabsmobileapp.MainA..., appPackage: com.swaglabsmobileapp, appWaitDuration: 20000, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: TestEmulatorApp, noReset: false, platformName: ANDROID}, appium:deviceApiLevel: 36, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2220, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:noReset: false, appium:pixelRatio: 2.75, appium:platformVersion: 16, appium:statBarHeight: 66, appium:takesScreenshot: true, appium:viewportRect: {height: 2154, left: 0, top: 66, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: ANDROID}
+Session ID: cbdad439-e6f1-4c98-be83-11e84bf635eb
+[INFO] 21-10-2025 01:41:25 [main] [com.swaglabs.android.DriverManager] - Driver quit successfully
+[INFO] 21-10-2025 01:41:25 [main] [com.swaglabs.android.DriverManager] - Appium server stopped successfully

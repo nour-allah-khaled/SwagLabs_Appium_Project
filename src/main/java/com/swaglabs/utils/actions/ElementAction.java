@@ -117,4 +117,28 @@ public class ElementAction {
         }
         throw new RuntimeException("Element not found after scrolling: " + locator);
     }
+    public void scrollUntilVisible(By locator) {
+        int maxScrolls = 7;
+        LogsManager.info("Scrolling to find element: " + locator);
+
+        for (int i = 0; i < maxScrolls; i++) {
+            try {
+                List<WebElement> elements = driver.findElements(locator);
+                if (!elements.isEmpty() && elements.get(0).isDisplayed()) {
+                    LogsManager.info("Element is visible after " + (i + 1) + " scrolls: " + locator);
+                    return;
+                }
+            } catch (Exception ignored) {
+            }
+            try {
+                DriverManager.mobileAction().swipeDown();
+                LogsManager.info("Swipe down attempt " + (i + 1) + " to find: " + locator);
+            } catch (Exception e) {
+                LogsManager.error("Failed to swipe down: " + e.getMessage());
+            }
+        }
+        LogsManager.error("Element not found after " + maxScrolls + " scroll attempts: " + locator);
+        throw new RuntimeException("Element not found after scrolling: " + locator);
+    }
+
 }

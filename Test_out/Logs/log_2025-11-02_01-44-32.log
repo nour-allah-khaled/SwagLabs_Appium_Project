@@ -1,0 +1,24 @@
+[INFO] 02-11-2025 01:44:32 [main] [com.swaglabs.android.DriverManager] - Appium service started.
+[INFO] 02-11-2025 01:44:45 [main] [com.swaglabs.android.DriverManager] - Driver initialized for platform: null
+[INFO] 02-11-2025 01:44:51 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-Username
+[INFO] 02-11-2025 01:44:52 [main] [com.swaglabs.utils.actions.ElementAction] - Focused on element: AppiumBy.accessibilityId: test-Username
+[INFO] 02-11-2025 01:44:54 [main] [com.swaglabs.utils.actions.ElementAction] - Typed text 'standard_user' into element: AppiumBy.accessibilityId: test-Username
+[INFO] 02-11-2025 01:44:55 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-Password
+[INFO] 02-11-2025 01:44:56 [main] [com.swaglabs.utils.actions.ElementAction] - Focused on element: AppiumBy.accessibilityId: test-Password
+[INFO] 02-11-2025 01:44:57 [main] [com.swaglabs.utils.actions.ElementAction] - Typed text 'secret_sauce' into element: AppiumBy.accessibilityId: test-Password
+[INFO] 02-11-2025 01:44:58 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-LOGIN
+[INFO] 02-11-2025 01:44:59 [main] [com.swaglabs.utils.actions.ElementAction] - Got text 'PRODUCTS' from element: By.xpath: //android.widget.TextView[@text="PRODUCTS"]
+[INFO] 02-11-2025 01:44:59 [main] [tests.TC02_Home] - Login successfulstandard_user secret_sauce
+[INFO] 02-11-2025 01:44:59 [main] [com.swaglabs.pages.Page02_Home] - Starting to add products to cart: [Sauce Labs Backpack, Sauce Labs Bike Light]
+[INFO] 02-11-2025 01:44:59 [main] [com.swaglabs.pages.Page02_Home] - Scroll attempt 1 - Products remaining: [Sauce Labs Backpack, Sauce Labs Bike Light]
+[INFO] 02-11-2025 01:44:59 [main] [com.swaglabs.pages.Page02_Home] - Currently visible products: [Sauce Labs Backpack, Sauce Labs Bike Light]
+[INFO] 02-11-2025 01:45:00 [main] [com.swaglabs.pages.Page02_Home] - Successfully added product to cart: Sauce Labs Backpack
+[INFO] 02-11-2025 01:45:00 [main] [com.swaglabs.pages.Page02_Home] - Successfully added product to cart: Sauce Labs Bike Light
+[INFO] 02-11-2025 01:45:00 [main] [com.swaglabs.pages.Page02_Home] - Successfully added products: [Sauce Labs Backpack, Sauce Labs Bike Light]
+[INFO] 02-11-2025 01:45:00 [main] [com.swaglabs.utils.WaitManager] - Waiting for element to be visible: By.xpath: //android.view.ViewGroup[@content-desc='test-Item']
+[INFO] 02-11-2025 01:45:01 [main] [com.swaglabs.utils.WaitManager] - Element is now visible: By.xpath: //android.view.ViewGroup[@content-desc='test-Item']
+[INFO] 02-11-2025 01:45:02 [main] [com.swaglabs.pages.Page02_Home] - Removed product from cart: Sauce Labs Backpack
+[INFO] 02-11-2025 01:45:02 [main] [com.swaglabs.pages.Page02_Home] - Cart badge number: 1
+[INFO] 02-11-2025 01:45:02 [main] [tests.TC02_Home] - Product removed from the cart successfully and the cart badge number is updated
+[INFO] 02-11-2025 01:45:03 [main] [com.swaglabs.android.DriverManager] - Driver quit successfully
+[INFO] 02-11-2025 01:45:03 [main] [com.swaglabs.android.DriverManager] - Appium server stopped successfully

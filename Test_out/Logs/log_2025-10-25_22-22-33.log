@@ -1,0 +1,29 @@
+[INFO] 25-10-2025 22:22:33 [main] [com.swaglabs.android.DriverManager] - Appium service started.
+[INFO] 25-10-2025 22:23:02 [main] [com.swaglabs.android.DriverManager] - Driver initialized for platform: null
+[INFO] 25-10-2025 22:23:04 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-Username
+[INFO] 25-10-2025 22:23:06 [main] [com.swaglabs.utils.actions.ElementAction] - Focused on element: AppiumBy.accessibilityId: test-Username
+[INFO] 25-10-2025 22:23:08 [main] [com.swaglabs.utils.actions.ElementAction] - Typed text 'standard_user' into element: AppiumBy.accessibilityId: test-Username
+[INFO] 25-10-2025 22:23:10 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-Password
+[INFO] 25-10-2025 22:23:11 [main] [com.swaglabs.utils.actions.ElementAction] - Focused on element: AppiumBy.accessibilityId: test-Password
+[INFO] 25-10-2025 22:23:13 [main] [com.swaglabs.utils.actions.ElementAction] - Typed text 'secret_sauce' into element: AppiumBy.accessibilityId: test-Password
+[INFO] 25-10-2025 22:23:14 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-LOGIN
+[INFO] 25-10-2025 22:23:17 [main] [com.swaglabs.utils.actions.ElementAction] - Got text 'PRODUCTS' from element: By.xpath: //android.widget.TextView[@text="PRODUCTS"]
+[INFO] 25-10-2025 22:23:17 [main] [tests.TC02_Home] - User logged in successfullyby enter username: standard_user and password: secret_sauce
+[INFO] 25-10-2025 22:23:18 [main] [com.swaglabs.utils.WaitManager] - Waiting for element to be visible: By.xpath: //android.widget.TextView[@text="Name (A to Z)"]
+[INFO] 25-10-2025 22:23:19 [main] [com.swaglabs.utils.WaitManager] - Element is now visible: By.xpath: //android.widget.TextView[@text="Name (A to Z)"]
+[INFO] 25-10-2025 22:23:19 [main] [com.swaglabs.utils.WaitManager] - Waiting for element to be visible: By.xpath: //android.widget.TextView[@text="Name (Z to A)"]
+[INFO] 25-10-2025 22:23:19 [main] [com.swaglabs.utils.WaitManager] - Element is now visible: By.xpath: //android.widget.TextView[@text="Name (Z to A)"]
+[INFO] 25-10-2025 22:23:19 [main] [com.swaglabs.utils.WaitManager] - Waiting for element to be visible: By.xpath: //android.widget.TextView[@text="Price (low to high)"]
+[INFO] 25-10-2025 22:23:20 [main] [com.swaglabs.utils.WaitManager] - Element is now visible: By.xpath: //android.widget.TextView[@text="Price (low to high)"]
+[INFO] 25-10-2025 22:23:20 [main] [com.swaglabs.utils.WaitManager] - Waiting for element to be visible: By.xpath: //android.widget.TextView[@text="Price (high to low)"]
+[INFO] 25-10-2025 22:23:21 [main] [com.swaglabs.utils.WaitManager] - Element is now visible: By.xpath: //android.widget.TextView[@text="Price (high to low)"]
+[INFO] 25-10-2025 22:23:21 [main] [com.swaglabs.utils.WaitManager] - Waiting for product list to load: By.xpath: .//android.widget.TextView[@content-desc='test-Item title']
+[INFO] 25-10-2025 22:23:22 [main] [com.swaglabs.utils.WaitManager] - Product list loaded successfully: By.xpath: .//android.widget.TextView[@content-desc='test-Item title']
+[INFO] 25-10-2025 22:23:22 [main] [com.swaglabs.pages.Page02_Home] - Filtered products by: Name (A to Z)
+[INFO] 25-10-2025 22:23:23 [main] [com.swaglabs.pages.Page02_Home] - Product names found: [Sauce Labs Backpack, Sauce Labs Bike Light]
+[INFO] 25-10-2025 22:23:23 [main] [com.swaglabs.pages.Page02_Home] - Verified products are sorted by Name (A to Z)
+[INFO] 25-10-2025 22:23:24 [main] [com.swaglabs.pages.Page02_Home] - Successfully added product to cart: Sauce Labs Backpack
+[INFO] 25-10-2025 22:23:26 [main] [com.swaglabs.pages.Page02_Home] - Successfully added product to cart: Sauce Labs Bike Light
+[INFO] 25-10-2025 22:23:27 [main] [tests.TC02_Home] - All products added to the cart successfully and navigate to the cart page
+[INFO] 25-10-2025 22:23:40 [main] [com.swaglabs.android.DriverManager] - Driver quit successfully
+[INFO] 25-10-2025 22:23:42 [main] [com.swaglabs.android.DriverManager] - Appium server stopped successfully

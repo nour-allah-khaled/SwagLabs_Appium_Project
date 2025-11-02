@@ -46,21 +46,21 @@ public class BaseClass {
         return JsonReader.getJsonData("$.invalidPassword");
     }
     protected String getProductOne() {
-            return JsonReader.getJsonData("$Product.Product1");
+            return JsonReader.getJsonData("Product.Product1");
     }
     protected String getProductTwo() {
-        return JsonReader.getJsonData("$Product.Product2");
+        return JsonReader.getJsonData("Product.Product2");
     }
     protected String getProductThree() {
-        return JsonReader.getJsonData("$Product.Product3");
+        return JsonReader.getJsonData("Product.Product3");
     }
     protected String getProductFour() {
-        return JsonReader.getJsonData("$Product.Product4");
+        return JsonReader.getJsonData("Product.Product4");
     }
     protected String getProductFive() {
-        return JsonReader.getJsonData("$Product.Product5");
+        return JsonReader.getJsonData("Product.Product5");
     }
     protected String getProductSix() {
-        return JsonReader.getJsonData("$Product.Product6");
+        return JsonReader.getJsonData("Product.Product6");
     }
 }
