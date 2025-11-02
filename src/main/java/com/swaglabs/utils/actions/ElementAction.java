@@ -101,7 +101,7 @@ public class ElementAction {
 
     //scroll to element
     public void scrollToElement(By locator) {
-        int maxScrolls = 5;
+        int maxScrolls = 10;
         for (int i = 0; i < maxScrolls; i++) {
             try {
                 WebElement element = driver.findElement(locator);
