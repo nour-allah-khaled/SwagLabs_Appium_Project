@@ -101,13 +101,12 @@ public class ElementAction {
 
     //scroll to element
     public void scrollToElement(By locator) {
-        int maxScrolls = 10;
+        int maxScrolls = 13;
         for (int i = 0; i < maxScrolls; i++) {
             try {
                 WebElement element = driver.findElement(locator);
                 if (element.isDisplayed()) {
-                    clicking(locator);
-                    LogsManager.info("Found and clicked on element: " + locator);
+                    LogsManager.info("Element found after " + (i + 1) + " scroll attempts: " + locator);
                     return;
                 }
             } catch (Exception ignored) {
@@ -117,6 +116,13 @@ public class ElementAction {
         }
         throw new RuntimeException("Element not found after scrolling: " + locator);
     }
+
+    public void scrollToAndClick(By locator) {
+        scrollToElement(locator);
+        wait.waitForElementClickable(locator);
+        DriverManager.getElementAction().clicking(locator);
+    }
+
     public void scrollUntilVisible(By locator) {
         int maxScrolls = 7;
         LogsManager.info("Scrolling to find element: " + locator);

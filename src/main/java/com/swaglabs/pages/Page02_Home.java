@@ -262,7 +262,7 @@ public class Page02_Home {
     //Assertion Methods
     public Page01_Login assertToLogout(){
         boolean isLoginPageDisplayed = driver.findElement(LoginPage).isDisplayed();
-        DriverManager.hardAssertion().assertTrue(isLoginPageDisplayed, "Logout not successful - Login page not displayed");
+        DriverManager.softAssertion().assertTrue(isLoginPageDisplayed, "Logout not successful - Login page not displayed");
         return new Page01_Login(driver);
     }
     public Page02_Home assertCartBadgeCount() {
@@ -271,7 +271,7 @@ public class Page02_Home {
         }
         int currentCount = getCurrentCartBadgeCount();
         int expectedCount = previousBadgeCount != null ? (previousBadgeCount - lastRemovedCount) : currentCount;
-        DriverManager.hardAssertion().assertEquals(currentCount, expectedCount, "Cart badge did not change as expected after removal");
+        DriverManager.softAssertion().assertEquals(currentCount, expectedCount, "Cart badge did not change as expected after removal");
         LogsManager.info("Cart badge changed correctly from " + previousBadgeCount + " to " + currentCount + " (removed " + lastRemovedCount + ")");
         previousBadgeCount = null;
         lastRemovedCount = 0;
@@ -279,20 +279,20 @@ public class Page02_Home {
     }
     public Page03_ProductDetails assertToProductDetails(){
         String actualProductName = DriverManager.getElementAction().getText(productDetails);
-        DriverManager.hardAssertion().assertEquals(actualProductName, "Sauce Labs Backpack", "Product details page not displayed correctly");
+        DriverManager.softAssertion().assertEquals(actualProductName, "Sauce Labs Backpack", "Product details page not displayed correctly");
         return new Page03_ProductDetails(driver);
 
     }
     public Page04_AddToCart assertToAddToCartPage(){
         String actualTitle = DriverManager.getElementAction().getText(addToCartPage);
-        DriverManager.hardAssertion().assertEquals(actualTitle, "YOUR CART", "Add to Cart page not displayed correctly");
+        DriverManager.softAssertion().assertEquals(actualTitle, "YOUR CART", "Add to Cart page not displayed correctly");
         return new Page04_AddToCart(driver);
     }
     public Page02_Home assertPricesSortedHighToLow() {
         List<Double> actualPrices = getProductPriceList();
         List<Double> sortedPrices = new ArrayList<>(actualPrices);
         Collections.sort(sortedPrices, Collections.reverseOrder());
-        DriverManager.hardAssertion().assertEquals(
+        DriverManager.softAssertion().assertEquals(
                 actualPrices,
                 sortedPrices,
                 "Products are not sorted by price (High to Low)"
@@ -304,7 +304,7 @@ public class Page02_Home {
         List<String> actualNames = getProductNamesList();
         List<String> sortedNames = new ArrayList<>(actualNames);
         Collections.sort(sortedNames);
-        DriverManager.hardAssertion().assertEquals(
+        DriverManager.softAssertion().assertEquals(
                 actualNames,
                 sortedNames,
                 "Products are not sorted by Name (A to Z)"

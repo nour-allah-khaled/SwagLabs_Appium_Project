@@ -1,0 +1,4 @@
+allure-report/* linguist-vendored
+allure-results/* linguist-vendored
+test-output/* linguist-vendored
+*.html linguist-vendored

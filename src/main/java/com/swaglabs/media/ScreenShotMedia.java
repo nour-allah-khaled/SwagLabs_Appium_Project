@@ -14,7 +14,7 @@ import java.io.File;
 import java.nio.file.Files;
 
 public class ScreenShotMedia {
-    public static final String SCREENSHOT_PATH = "Test_out/ScreenShots/";
+    public static final String SCREENSHOT_PATH = "Test-out/ScreenShots/";
     // create method to take full page screenshot
     public static void Screen_shot(AndroidDriver driver, String screenshotName) {
         try {

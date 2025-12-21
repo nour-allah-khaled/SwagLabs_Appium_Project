@@ -19,7 +19,7 @@ public class SoftAssertion extends BaseAssertion {
     }
 
     @Override
-    protected void assertFalse(boolean condition, String message) {
+    public void assertFalse(boolean condition, String message) {
         used = true;
         softAssert.assertFalse(condition, message);
     }

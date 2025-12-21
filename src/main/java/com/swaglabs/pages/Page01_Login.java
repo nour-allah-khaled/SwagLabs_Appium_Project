@@ -38,19 +38,19 @@ public class Page01_Login {
     //Assertion methods can be added here
     public Page02_Home assertLogin(){
         String HomePage = DriverManager.getElementAction().getText(this.GetHomePage);
-        DriverManager.hardAssertion().assertEquals(HomePage,"PRODUCTS","Login not successful");
+        DriverManager.softAssertion().assertEquals(HomePage,"PRODUCTS","Login not successful");
         return new Page02_Home(driver);
     }
     public Page01_Login assertInvalidMsg()
     {
         String actual=DriverManager.getElementAction().getText(this.getInvalidMsg);
-        DriverManager.hardAssertion().assertEquals(actual,"Username and password do not match any user in this service.","Invalid message not matched");
+        DriverManager.softAssertion().assertEquals(actual,"Username and password do not match any user in this service.","Invalid message not matched");
         return this;
     }
     public Page01_Login assertEmptyMsg()
     {
         String actual=DriverManager.getElementAction().getText(this.getEmptyMsg);
-        DriverManager.hardAssertion().assertEquals(actual,"Username is required","Empty message not matched");
+        DriverManager.softAssertion().assertEquals(actual,"Username is required","Empty message not matched");
         return this;
     }
 

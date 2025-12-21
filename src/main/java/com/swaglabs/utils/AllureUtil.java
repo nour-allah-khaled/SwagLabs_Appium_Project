@@ -11,14 +11,14 @@ import java.io.File;
 import java.nio.file.Files;
 
 public class AllureUtil {
-    public static void cleanAllureResults() {
-        FileUtils.deleteQuietly(new File("Test_out/allure-results"));
+    public static void cleanAllureResults(){
+        FileUtils.deleteQuietly(new File("Test-out/allure-results/"));
     }
     public static void cleanLogfile(File file)
     {
         try{
             org.apache.commons.io.FileUtils.deleteQuietly(file);
-    }catch (Exception e){
+        }catch (Exception e){
             LogsManager.error("Failed to clean directory:" , file.getAbsolutePath(), e.getMessage());
         }
     }

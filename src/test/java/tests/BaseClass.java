@@ -25,23 +25,18 @@ public class BaseClass {
     protected String getUserName() {
         return JsonReader.getJsonData("$.userName");
     }
-
     protected String getPassword() {
         return JsonReader.getJsonData("$.password");
     }
-
     protected String getEmptyUserName() {
         return JsonReader.getJsonData("$.emptyUsername");
     }
-
     protected String getEmptyPassword() {
         return JsonReader.getJsonData("$.emptyPassword");
     }
-
     protected String getInvalidUserName() {
         return JsonReader.getJsonData("$.invalidUsername");
     }
-
     protected String getInvalidPassword() {
         return JsonReader.getJsonData("$.invalidPassword");
     }
@@ -63,4 +58,8 @@ public class BaseClass {
     protected String getProductSix() {
         return JsonReader.getJsonData("Product.Product6");
     }
+    protected String getFirstName(){return JsonReader.getJsonData("$.FirstName");}
+    protected String getLastName(){return JsonReader.getJsonData("$.LastName");}
+    protected String getZipCode(){return JsonReader.getJsonData("$.PostalCode");}
+
 }

@@ -4,7 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class LogsManager {
-    public static final String LOGS_PATH = "Test_out/Logs/";
+    public static final String LOGS_PATH = "Test-out/Logs/";
     private static Logger logger (){
         return  LogManager.getLogger(Thread.currentThread().getStackTrace()[3].getClassName());
     }

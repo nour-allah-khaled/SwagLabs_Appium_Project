@@ -39,6 +39,18 @@ public class WaitManager {
         LogsManager.info("Product list loaded successfully: " + locator);
     }
 
+    public void waitForElementClickable(By locator) {
+        LogsManager.info("Waiting for element to be clickable: " + locator);
+        fluentWait().until(driver -> {
+            try {
+                WebElement element = driver.findElement(locator);
+                return element.isDisplayed() && element.isEnabled();
+            } catch (Exception e) {
+                return false;
+            }
+        });
+        LogsManager.info("Element is now clickable: " + locator);
+    }
 
     private ArrayList<Class<? extends Exception>> Exceptionn() {
         ArrayList<Class<? extends Exception>> exceptions = new ArrayList<>();
@@ -47,5 +59,16 @@ public class WaitManager {
         exceptions.add(org.openqa.selenium.ElementNotInteractableException.class);
         exceptions.add(org.openqa.selenium.ElementClickInterceptedException.class);
         return exceptions;
+    }
+
+    public boolean waitForElementNotVisible(By locator) {
+        LogsManager.info("Waiting for element to be invisible or removed: " + locator);
+        try {
+            WebElement badge = driver.findElement(locator);
+            String text = badge.getText();
+            return text == null || text.trim().isEmpty() || text.trim().equals("0");
+        } catch (Exception e) {
+            return true;
+        }
     }
 }
