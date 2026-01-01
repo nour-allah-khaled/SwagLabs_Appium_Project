@@ -12,7 +12,7 @@ public class E2E extends BaseClass {
     @Description("Comprehensive end-to-end test scenarios covering complete user journeys")
     // Login -> Home (multiple products) -> Add to Cart -> Checkout -> Overview -> Finish -> Home
     @Test
-    public void endToEndTestFromLoginToFinsh() {
+    public void LoginToFinsh() {
         new Page01_Login(DriverManager.getDriver()).userName(getUserName())
                 .passWord(getPassword()).loginBtn().assertLogin();
         new Page02_Home(DriverManager.getDriver()).AddAllProductsToCart(getProductOne(), getProductTwo()).ClickOnCartIcon().assertToAddToCartPage();
@@ -25,7 +25,7 @@ public class E2E extends BaseClass {
     }
     // Login -> Home (with sorting product Name) -> Add to Cart -> Checkout > Overview > Finish > Home
     @Test
-    public void endToEndTestFromLoginToFinshWithSortingProductByName() {
+    public void LoginToFinshWithSortingProductByName() {
         new Page01_Login(DriverManager.getDriver()).userName(getUserName())
                 .passWord(getPassword()).loginBtn().assertLogin();
         new Page02_Home(DriverManager.getDriver()).filterProducts("Name (A to Z)").assertNamesSortedAToZ()
@@ -39,7 +39,7 @@ public class E2E extends BaseClass {
     }
     // Login -> Home (with sorting product Price) -> Add to Cart -> Checkout > Overview > Finish > Home
     @Test
-    public void endToEndTestFromLoginToFinshWithSortingProductByPrice() {
+    public void LoginToFinshWithSortingProductByPrice() {
         new Page01_Login(DriverManager.getDriver()).userName(getUserName())
                 .passWord(getPassword()).loginBtn().assertLogin();
         new Page02_Home(DriverManager.getDriver()).filterProducts("Price (high to low)").assertPricesSortedHighToLow()
@@ -53,7 +53,7 @@ public class E2E extends BaseClass {
     }
     // Login -> Home -> Product Details -> Add to Cart -> Checkout > Overview > Finish > Home
     @Test
-    public void endToEndTestFromLoginToFinshViaProductDetails() {
+    public void LoginToFinshViaProductDetails() {
         new Page01_Login(DriverManager.getDriver()).userName(getUserName())
                 .passWord(getPassword()).loginBtn().assertLogin();
         new Page02_Home(DriverManager.getDriver()).ClickOnSpecificProductTitle()

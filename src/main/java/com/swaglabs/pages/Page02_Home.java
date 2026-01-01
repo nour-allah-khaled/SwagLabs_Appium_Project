@@ -245,6 +245,7 @@ public class Page02_Home {
     }
     @Step("Clicking on Logout button")
     public Page02_Home ClickOnLogoutBtn(){
+        wait.waitForElementVisible(logoutBtn);
         driver.findElement(logoutBtn).click();
         return this;
     }

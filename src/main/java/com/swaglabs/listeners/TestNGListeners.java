@@ -9,13 +9,15 @@ import io.appium.java_client.android.AndroidDriver;
 import org.testng.*;
 import java.io.File;
 import static com.swaglabs.utils.logs.LogsManager.LOGS_PATH;
-
+import static com.swaglabs.media.ScreenShotMedia.SCREENSHOT_PATH;
 public class TestNGListeners implements IExecutionListener, IInvokedMethodListener, ITestListener {
     public void onExecutionStart() {
         AllureUtil.cleanAllureResults();
         LogsManager.info("Cleaned Allure results");
         AllureUtil.cleanLogfile(new File(LOGS_PATH));
         LogsManager.info("Cleaned Logfile");
+        AllureUtil.cleanScreenshots(new File(SCREENSHOT_PATH));
+        LogsManager.info("Cleaned Screenshots Folder");
         LogsManager.info("Starting execution");
         PropertyReader.loadProperties();
         LogsManager.info("Loaded properties");
@@ -35,7 +37,6 @@ public class TestNGListeners implements IExecutionListener, IInvokedMethodListen
         AndroidDriver driver = null;
         if (method.isTestMethod()) {
               driver = DriverManager.getDriver(); //driver.getDriver();
-                ScreenShotMedia.Screen_shot(driver, "ScreenShot-" + testResult.getName());
                 SoftAssertion.assertAll();
                 if (testResult.getStatus() == ITestResult.FAILURE) {
                     LogsManager.info("Test Execution Failed");

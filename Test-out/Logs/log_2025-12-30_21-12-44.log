@@ -1,0 +1,19 @@
+[INFO] 30-12-2025 21:12:44 [main] [com.swaglabs.listeners.TestNGListeners] - Cleaned Allure results
+[INFO] 30-12-2025 21:12:44 [main] [com.swaglabs.listeners.TestNGListeners] - Cleaned Logfile
+[INFO] 30-12-2025 21:12:44 [main] [com.swaglabs.listeners.TestNGListeners] - Cleaned Screenshots Folder
+[INFO] 30-12-2025 21:12:44 [main] [com.swaglabs.listeners.TestNGListeners] - Starting execution
+[INFO] 30-12-2025 21:12:44 [main] [com.swaglabs.listeners.TestNGListeners] - Loaded properties
+[INFO] 30-12-2025 21:12:48 [main] [com.swaglabs.android.DriverManager] - Appium service started.
+[INFO] 30-12-2025 21:12:57 [main] [com.swaglabs.android.DriverManager] - Driver initialized for platform: android
+[INFO] 30-12-2025 21:12:57 [main] [com.swaglabs.listeners.TestNGListeners] - Test Case LoginToLogout started
+[INFO] 30-12-2025 21:13:00 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-Username
+[INFO] 30-12-2025 21:13:01 [main] [com.swaglabs.utils.actions.ElementAction] - Focused on element: AppiumBy.accessibilityId: test-Username
+[INFO] 30-12-2025 21:13:02 [main] [com.swaglabs.utils.actions.ElementAction] - Typed text 'standard_user' into element: AppiumBy.accessibilityId: test-Username
+[INFO] 30-12-2025 21:13:03 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-Password
+[INFO] 30-12-2025 21:13:04 [main] [com.swaglabs.utils.actions.ElementAction] - Focused on element: AppiumBy.accessibilityId: test-Password
+[INFO] 30-12-2025 21:13:05 [main] [com.swaglabs.utils.actions.ElementAction] - Typed text 'secret_sauce' into element: AppiumBy.accessibilityId: test-Password
+[INFO] 30-12-2025 21:13:06 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-LOGIN
+[INFO] 30-12-2025 21:13:07 [main] [com.swaglabs.utils.actions.ElementAction] - Got text 'PRODUCTS' from element: By.xpath: //android.widget.TextView[@text="PRODUCTS"]
+[INFO] 30-12-2025 21:13:07 [main] [com.swaglabs.utils.WaitManager] - Waiting for element to be visible: By.xpath: //android.widget.TextView[@text="LOGOUT"]
+[INFO] 30-12-2025 21:13:09 [main] [com.swaglabs.utils.WaitManager] - Element is now visible: By.xpath: //android.widget.TextView[@text="LOGOUT"]
+[INFO] 30-12-2025 21:13:11 [main] [com.swaglabs.listeners.TestNGListeners] - Test LoginToLogout passed.

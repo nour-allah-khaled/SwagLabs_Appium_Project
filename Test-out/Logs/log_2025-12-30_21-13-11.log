@@ -1,0 +1,4 @@
+[INFO] 30-12-2025 21:13:11 [main] [com.swaglabs.listeners.TestNGListeners] - Test Case LoginToLogout passed
+[INFO] 30-12-2025 21:13:12 [main] [com.swaglabs.android.DriverManager] - Driver quit successfully
+[INFO] 30-12-2025 21:13:12 [main] [com.swaglabs.android.DriverManager] - Appium server stopped successfully
+[INFO] 30-12-2025 21:13:12 [main] [com.swaglabs.listeners.TestNGListeners] - Test Execution Finished

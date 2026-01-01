@@ -22,6 +22,14 @@ public class AllureUtil {
             LogsManager.error("Failed to clean directory:" , file.getAbsolutePath(), e.getMessage());
         }
     }
+    public static void cleanScreenshots(File file)
+    {
+        try{
+            org.apache.commons.io.FileUtils.deleteQuietly(file);
+        }catch (Exception e){
+            LogsManager.error("Failed to clean directory:" , file.getAbsolutePath(), e.getMessage());
+        }
+    }
     public static void attachLogs() {
         try {
             File logFile = new File(LogsManager.LOGS_PATH + "logs.log");
