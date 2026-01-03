@@ -52,16 +52,23 @@ jobs:
       - name: Setup Android PATH
         run: |
           echo "ANDROID_SDK_ROOT=$ANDROID_HOME" >> $GITHUB_ENV
+          echo "ANDROID_AVD_HOME=$HOME/.android/avd" >> $GITHUB_ENV
           echo "$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools:$ANDROID_HOME/cmdline-tools/latest/bin" >> $GITHUB_PATH
 
       - name: Create Android Emulator
         run: |
           yes | sdkmanager --licenses || true
           sdkmanager "system-images;android-30;google_apis;x86_64"
-          echo "no" | avdmanager create avd -n $ANDROID_DEVICE_NAME -k "system-images;android-30;google_apis;x86_64" --device "pixel"
+          mkdir -p $HOME/.android/avd
+          printf "no\n" | avdmanager create avd -n $ANDROID_DEVICE_NAME -k "system-images;android-30;google_apis;x86_64" --device "pixel"
+          echo "Available AVDs:"
+          emulator -list-avds
 
       - name: Start Emulator
         run: |
+          echo "Listing available AVDs before start:"
+          emulator -list-avds
+          echo "Starting emulator: $ANDROID_DEVICE_NAME"
           emulator -avd $ANDROID_DEVICE_NAME -no-window -no-audio &
           adb wait-for-device
           timeout 300 bash -c 'until adb shell getprop sys.boot_completed | grep -q 1; do sleep 2; done'
