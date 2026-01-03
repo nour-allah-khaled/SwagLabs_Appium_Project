@@ -51,35 +51,36 @@ jobs:
 
       - name: Setup Android PATH
         run: |
-          export ANDROID_SDK_ROOT=$HOME/Android/Sdk
-          export PATH=$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/tools:$PATH
-          echo "PATH set:"
-          echo $PATH
-          which emulator
+          echo "ANDROID_SDK_ROOT=$ANDROID_HOME" >> $GITHUB_ENV
+          echo "$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools:$ANDROID_HOME/cmdline-tools/latest/bin" >> $GITHUB_PATH
 
       - name: Create Android Emulator
         run: |
+          yes | sdkmanager --licenses || true
           sdkmanager "system-images;android-30;google_apis;x86_64"
           echo "no" | avdmanager create avd -n $ANDROID_DEVICE_NAME -k "system-images;android-30;google_apis;x86_64" --device "pixel"
 
-      - name: List available AVDs
-        run: emulator -list-avds
-
       - name: Start Emulator
         run: |
-          nohup emulator -avd $ANDROID_DEVICE_NAME -no-window -no-audio &
+          emulator -avd $ANDROID_DEVICE_NAME -no-window -no-audio &
           adb wait-for-device
-          adb shell input keyevent 82
-          sleep 20
+          timeout 300 bash -c 'until adb shell getprop sys.boot_completed | grep -q 1; do sleep 2; done'
 
       - name: Run Appium E2E Tests
         run: |
           npx appium &
-          sleep 20
+          sleep 15
           mvn -Dtest="E2E" clean test
         continue-on-error: true
 
+      - name: Stop Emulator
+        if: always()
+        run: |
+          adb emu kill || true
+          pkill -f emulator || true
+
       - name: Upload Test Results
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: Appium_AndroidReport
