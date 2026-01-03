@@ -58,22 +58,23 @@ jobs:
       - name: Create Android Emulator
         run: |
           yes | sdkmanager --licenses || true
-          sdkmanager "system-images;android-30;google_apis;arm64-v8a"
+          sdkmanager "system-images;android-30;google_apis;x86_64"
           mkdir -p $HOME/.android/avd
-          printf "no\n" | avdmanager create avd -n $ANDROID_DEVICE_NAME -k "system-images;android-30;google_apis;arm64-v8a" --device "pixel"
+          printf "no\n" | avdmanager create avd -n $ANDROID_DEVICE_NAME -k "system-images;android-30;google_apis;x86_64" --device "pixel"
           echo "Available AVDs:"
           emulator -list-avds
 
       - name: Start Emulator
-        timeout-minutes: 15
+        timeout-minutes: 20
         run: |
           echo "Starting emulator: $ANDROID_DEVICE_NAME"
-          emulator -avd $ANDROID_DEVICE_NAME -no-window -no-audio -no-snapshot-load -wipe-data -no-metrics &
+          emulator -avd $ANDROID_DEVICE_NAME -no-window -no-audio -no-snapshot-load -wipe-data -no-metrics -accel auto &
           echo "Waiting for device..."
           adb wait-for-device
-          echo "Waiting for boot completion..."
-          timeout 600 bash -c 'until adb shell getprop sys.boot_completed 2>/dev/null | grep -q 1; do sleep 2; done' || exit 1
+          echo "Waiting for boot completion (this may take 10-15 minutes without hardware acceleration)..."
+          timeout 900 bash -c 'until adb shell getprop sys.boot_completed 2>/dev/null | grep -q 1; do sleep 5; echo "Still booting..."; done' || exit 1
           echo "Emulator is ready!"
+          adb devices
 
       - name: Run Appium E2E Tests
         run: |
