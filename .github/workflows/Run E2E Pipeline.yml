@@ -55,9 +55,11 @@ jobs:
 
         - name: Start Emulator
           run: |
-                  nohup emulator -avd $ANDROID_DEVICE_NAME -no-window -no-audio &
-                  adb wait-for-device
-                  adb shell input keyevent 82
+            export ANDROID_SDK_ROOT=$HOME/Android/Sdk
+            export PATH=$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/platform-tools:$PATH
+            nohup emulator -avd $ANDROID_DEVICE_NAME -no-window -no-audio &
+            adb wait-for-device
+            adb shell input keyevent 82
 
         - name: Run Appium E2E Tests
           run: |
