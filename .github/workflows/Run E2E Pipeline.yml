@@ -14,14 +14,12 @@ jobs:
     permissions:
       checks: write
     env:
-        ANDROID_DEVICE_NAME: TestEmulatorApp
-        ANDROID_PLATFORM_VERSION: 11.0
-        ANDROID_APP_PATH: src/test/java/resources/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk
-        ANDROID_APP_PACKAGE: com.swaglabsmobileapp
-        ANDROID_APP_ACTIVITY: com.swaglabsmobileapp.MainActivity
-        ANDROID_AUTOMATION_NAME: UiAutomator2
-        ANDROID_SDK_ROOT: ${{ runner.home }}/Android/Sdk
-        PATH: ${{ runner.home }}/Android/Sdk/emulator:${{ runner.home }}/Android/Sdk/platform-tools:${{ runner.home }}/Android/Sdk/tools:${{ env.PATH }}
+      ANDROID_DEVICE_NAME: TestEmulatorApp
+      ANDROID_PLATFORM_VERSION: 11.0
+      ANDROID_APP_PATH: src/test/java/resources/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk
+      ANDROID_APP_PACKAGE: com.swaglabsmobileapp
+      ANDROID_APP_ACTIVITY: com.swaglabsmobileapp.MainActivity
+      ANDROID_AUTOMATION_NAME: UiAutomator2
 
     steps:
       - name: Checkout Code
@@ -57,14 +55,11 @@ jobs:
           export PATH=$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/tools:$PATH
           echo "PATH set:"
           echo $PATH
-
-      - name: Accept Android licenses & Install System Image
-        run: |
-          yes | sdkmanager --licenses
-          sdkmanager "system-images;android-30;google_apis;x86_64"
+          which emulator
 
       - name: Create Android Emulator
         run: |
+          sdkmanager "system-images;android-30;google_apis;x86_64"
           echo "no" | avdmanager create avd -n $ANDROID_DEVICE_NAME -k "system-images;android-30;google_apis;x86_64" --device "pixel"
 
       - name: List available AVDs
@@ -84,12 +79,8 @@ jobs:
           mvn -Dtest="E2E" clean test
         continue-on-error: true
 
-      - name: Generate Allure HTML Report
-        run: |
-          allure generate Test-out/allure-results --clean -o Test-out/allure-report
-
-      - name: Upload Allure HTML Report
+      - name: Upload Test Results
         uses: actions/upload-artifact@v4
         with:
-          name: Appium_Android_Allure_HTML
-          path: Test-out/allure-report
+          name: Appium_AndroidReport
+          path: "Test-out/allure-results"
