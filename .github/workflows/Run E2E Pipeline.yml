@@ -14,12 +14,14 @@ jobs:
     permissions:
       checks: write
     env:
-      ANDROID_DEVICE_NAME: TestEmulatorApp
-      ANDROID_PLATFORM_VERSION: 11.0
-      ANDROID_APP_PATH: src/test/java/resources/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk
-      ANDROID_APP_PACKAGE: com.swaglabsmobileapp
-      ANDROID_APP_ACTIVITY: com.swaglabsmobileapp.MainActivity
-      ANDROID_AUTOMATION_NAME: UiAutomator2
+        ANDROID_DEVICE_NAME: TestEmulatorApp
+        ANDROID_PLATFORM_VERSION: 11.0
+        ANDROID_APP_PATH: src/test/java/resources/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk
+        ANDROID_APP_PACKAGE: com.swaglabsmobileapp
+        ANDROID_APP_ACTIVITY: com.swaglabsmobileapp.MainActivity
+        ANDROID_AUTOMATION_NAME: UiAutomator2
+        ANDROID_SDK_ROOT: ${{ runner.home }}/Android/Sdk
+        PATH: ${{ runner.home }}/Android/Sdk/emulator:${{ runner.home }}/Android/Sdk/platform-tools:${{ runner.home }}/Android/Sdk/tools:${{ env.PATH }}
 
     steps:
       - name: Checkout Code
