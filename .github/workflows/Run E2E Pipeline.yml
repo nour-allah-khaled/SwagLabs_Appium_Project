@@ -44,50 +44,31 @@ jobs:
       - name: Install Appium
         uses: FinbertMDS/setup-appium@latest
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
+      - name: Run tests with Android Emulator
+        uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 30
-
-      - name: Setup Android PATH
-        run: |
-          echo "ANDROID_SDK_ROOT=$ANDROID_HOME" >> $GITHUB_ENV
-          echo "ANDROID_AVD_HOME=$HOME/.android/avd" >> $GITHUB_ENV
-          echo "$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools:$ANDROID_HOME/cmdline-tools/latest/bin" >> $GITHUB_PATH
-
-      - name: Create Android Emulator
-        run: |
-          yes | sdkmanager --licenses || true
-          sdkmanager "system-images;android-30;google_apis;x86_64"
-          mkdir -p $HOME/.android/avd
-          printf "no\n" | avdmanager create avd -n $ANDROID_DEVICE_NAME -k "system-images;android-30;google_apis;x86_64" --device "pixel"
-          echo "Available AVDs:"
-          emulator -list-avds
-
-      - name: Start Emulator
-        timeout-minutes: 20
-        run: |
-          echo "Starting emulator: $ANDROID_DEVICE_NAME"
-          emulator -avd $ANDROID_DEVICE_NAME -no-window -no-audio -no-snapshot-load -wipe-data -no-metrics -accel auto &
-          echo "Waiting for device..."
-          adb wait-for-device
-          echo "Waiting for boot completion (this may take 10-15 minutes without hardware acceleration)..."
-          timeout 900 bash -c 'until adb shell getprop sys.boot_completed 2>/dev/null | grep -q 1; do sleep 5; echo "Still booting..."; done' || exit 1
-          echo "Emulator is ready!"
-          adb devices
-
-      - name: Run Appium E2E Tests
-        run: |
-          npx appium &
-          sleep 15
-          mvn -Dtest="E2E" clean test
+          target: google_apis
+          arch: x86
+          profile: Pixel 4
+          emulator-options: >-
+            -no-window
+            -no-audio
+            -no-boot-anim
+            -no-snapshot-load
+            -wipe-data
+            -gpu swiftshader_indirect
+          disable-animations: true
+          script: |
+            echo "Starting Appium server..."
+            npx appium &
+            sleep 20
+            echo "Waiting for Appium to be ready..."
+            timeout 60 bash -c 'until curl -s http://127.0.0.1:4723/status | grep -q "value"; do sleep 2; done' || echo "Appium check skipped"
+            echo "Running E2E tests..."
+            mvn -Dtest="E2E" clean test || TEST_EXIT=$?
+            exit ${TEST_EXIT:-0}
         continue-on-error: true
-
-      - name: Stop Emulator
-        if: always()
-        run: |
-          adb emu kill || true
-          pkill -f emulator || true
 
       - name: Upload Test Results
         if: always()
