@@ -55,11 +55,14 @@ jobs:
           export PATH=$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/tools:$PATH
           echo "PATH set:"
           echo $PATH
-          which emulator
+
+      - name: Accept Android licenses & Install System Image
+        run: |
+          yes | sdkmanager --licenses
+          sdkmanager "system-images;android-30;google_apis;x86_64"
 
       - name: Create Android Emulator
         run: |
-          sdkmanager "system-images;android-30;google_apis;x86_64"
           echo "no" | avdmanager create avd -n $ANDROID_DEVICE_NAME -k "system-images;android-30;google_apis;x86_64" --device "pixel"
 
       - name: List available AVDs
@@ -79,8 +82,12 @@ jobs:
           mvn -Dtest="E2E" clean test
         continue-on-error: true
 
-      - name: Upload Test Results
+      - name: Generate Allure HTML Report
+        run: |
+          allure generate Test-out/allure-results --clean -o Test-out/allure-report
+
+      - name: Upload Allure HTML Report
         uses: actions/upload-artifact@v4
         with:
-          name: Appium_AndroidReport
-          path: "Test-out/allure-results"
+          name: Appium_Android_Allure_HTML
+          path: Test-out/allure-report
