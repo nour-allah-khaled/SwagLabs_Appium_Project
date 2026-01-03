@@ -8,6 +8,7 @@ on:
     branches:
       - main
   workflow_dispatch:
+
 env:
   executionType: ci
   appiumServerUrl: http://127.0.0.1:4723
@@ -33,7 +34,7 @@ jobs:
 
       - name: Install Appium
         run: |
-          npm install -g appium
+          npm install -g appium wait-on
           appium driver install uiautomator2
 
       - name: Run E2E tests on Android Emulator
@@ -48,14 +49,17 @@ jobs:
             -no-audio
             -no-boot-anim
             -gpu swiftshader_indirect
-          script: |
-            npm install -g wait-on
-            appium --log-level error &
-            echo "Waiting for Appium to be ready..."
-            wait-on http://127.0.0.1:4723/wd/hub/status
-            adb wait-for-device
-            adb devices
-            mvn clean test -Dtest=E2E -DexecutionType=${{ env.executionType }} -DappiumServerUrl=${{ env.appiumServerUrl }}
+        script: |
+          # Start Appium in background and log output
+          appium -a 0.0.0.0 -p 4723 --log-level error > appium.log 2>&1 &
+          echo "Waiting for Appium to be ready..."
+          # Wait for Appium server with timeout 60s
+          wait-on --timeout 60000 http://127.0.0.1:4723/wd/hub/status
+          # Wait for emulator
+          adb wait-for-device
+          adb devices
+          # Run Maven tests
+          mvn clean test -Dtest=E2E -DexecutionType=${{ env.executionType }} -DappiumServerUrl=${{ env.appiumServerUrl }}
 
       - name: Upload test reports
         if: always()
