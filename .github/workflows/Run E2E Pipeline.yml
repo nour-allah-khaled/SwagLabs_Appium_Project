@@ -1,6 +1,6 @@
 name: E2E
-on :
-  push :
+on:
+  push:
     branches:
       - main
   pull_request:
@@ -9,67 +9,78 @@ on :
   workflow_dispatch:
 
 jobs:
-    Appium_Android:
-      runs-on: ubuntu-latest
-      permissions:
-        checks: write
-      env:
-        ANDROID_DEVICE_NAME: TestEmulatorApp
-        ANDROID_PLATFORM_VERSION: 11.0
-        ANDROID_APP_PATH: src/test/java/resources/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk
-        ANDROID_APP_PACKAGE: com.swaglabsmobileapp
-        ANDROID_APP_ACTIVITY: com.swaglabsmobileapp.MainActivity
-        ANDROID_AUTOMATION_NAME: UiAutomator2
-      steps:
-        - name: Checkout Code
-          uses: actions/checkout@v5
+  Appium_Android:
+    runs-on: ubuntu-latest
+    permissions:
+      checks: write
+    env:
+      ANDROID_DEVICE_NAME: TestEmulatorApp
+      ANDROID_PLATFORM_VERSION: 11.0
+      ANDROID_APP_PATH: src/test/java/resources/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk
+      ANDROID_APP_PACKAGE: com.swaglabsmobileapp
+      ANDROID_APP_ACTIVITY: com.swaglabsmobileapp.MainActivity
+      ANDROID_AUTOMATION_NAME: UiAutomator2
 
-        - name: Setup Java
-          uses: actions/setup-java@v5
-          with:
-            distribution: 'zulu' # See 'Supported distributions' for available options
-            java-version: '21'
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v5
 
-        - name: setup maven
-          uses: stCarolas/setup-maven@v5
-          with:
-            maven-version: 3.9.9
+      - name: Setup Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: 'zulu'
+          java-version: '21'
 
-        - name: Setup Node.js
-          uses: actions/setup-node@v4
-          with:
-            node-version: 20
+      - name: Setup Maven
+        uses: stCarolas/setup-maven@v5
+        with:
+          maven-version: 3.9.9
 
-        - name: Install Appium
-          uses: FinbertMDS/setup-appium@latest
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
-        - name: Setup Android SDK
-          uses: android-actions/setup-android@v3
-          with:
-            api-level: 30
+      - name: Install Appium
+        uses: FinbertMDS/setup-appium@latest
 
-        - name: Create Android Emulator
-          run: |
-              sdkmanager "system-images;android-30;google_apis;x86_64"
-              echo "no" | avdmanager create avd -n $ANDROID_DEVICE_NAME -k "system-images;android-30;google_apis;x86_64" --device "pixel"
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+        with:
+          api-level: 30
 
-        - name: Start Emulator
-          run: |
-            export ANDROID_SDK_ROOT=$HOME/Android/Sdk
-            export PATH=$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/platform-tools:$PATH
-            nohup emulator -avd $ANDROID_DEVICE_NAME -no-window -no-audio &
-            adb wait-for-device
-            adb shell input keyevent 82
+      - name: Setup Android PATH
+        run: |
+          export ANDROID_SDK_ROOT=$HOME/Android/Sdk
+          export PATH=$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/tools:$PATH
+          echo "PATH set:"
+          echo $PATH
+          which emulator
 
-        - name: Run Appium E2E Tests
-          run: |
-            npx appium &
-            sleep 20
-            mvn -Dtest="E2E" clean test
-          continue-on-error: true
+      - name: Create Android Emulator
+        run: |
+          sdkmanager "system-images;android-30;google_apis;x86_64"
+          echo "no" | avdmanager create avd -n $ANDROID_DEVICE_NAME -k "system-images;android-30;google_apis;x86_64" --device "pixel"
 
-        - name: Upload Test Results
-          uses: actions/upload-artifact@v4
-          with:
-              name: Appium_AndroidReport
-              path: "Test-out/allure-results/*.html"
+      - name: List available AVDs
+        run: emulator -list-avds
+
+      - name: Start Emulator
+        run: |
+          nohup emulator -avd $ANDROID_DEVICE_NAME -no-window -no-audio &
+          adb wait-for-device
+          adb shell input keyevent 82
+          sleep 20
+
+      - name: Run Appium E2E Tests
+        run: |
+          npx appium &
+          sleep 20
+          mvn -Dtest="E2E" clean test
+        continue-on-error: true
+
+      - name: Upload Test Results
+        uses: actions/upload-artifact@v4
+        with:
+          name: Appium_AndroidReport
+          path: "Test-out/allure-results"
