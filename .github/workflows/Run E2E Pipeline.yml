@@ -50,7 +50,7 @@ jobs:
             sleep 40
             adb wait-for-device
             adb devices
-            mvn clean test -Dtest=E2E
+            mvn clean test -Dtest=E2E -DexecutionType=ci
 
       - name: Upload test reports
         if: always()
