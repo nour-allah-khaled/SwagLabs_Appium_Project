@@ -69,7 +69,7 @@ jobs:
           echo "Listing available AVDs before start:"
           emulator -list-avds
           echo "Starting emulator: $ANDROID_DEVICE_NAME"
-          emulator -avd $ANDROID_DEVICE_NAME -no-window -no-audio &
+          emulator -avd $ANDROID_DEVICE_NAME -no-window -no-audio -no-accel -no-metrics &
           adb wait-for-device
           timeout 300 bash -c 'until adb shell getprop sys.boot_completed | grep -q 1; do sleep 2; done'
 
