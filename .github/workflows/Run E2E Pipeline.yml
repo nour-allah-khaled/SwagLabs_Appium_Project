@@ -12,6 +12,7 @@ on:
 jobs:
   E2E_Appium_Android:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -37,16 +38,18 @@ jobs:
         with:
           api-level: 30
           target: google_apis
-          arch: x86
-          disable-animations: true
+          arch: x86_64
+          disable-animations: false
           emulator-options: >-
             -no-window
             -no-audio
             -no-boot-anim
             -gpu swiftshader_indirect
           script: |
-            appium &
-            sleep 20
+            appium --log-level error &
+            sleep 40
+            adb wait-for-device
+            adb devices
             mvn clean test -Dtest=E2E
 
       - name: Upload test reports
