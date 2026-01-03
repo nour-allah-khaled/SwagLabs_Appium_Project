@@ -8,6 +8,9 @@ on:
     branches:
       - main
   workflow_dispatch:
+env:
+  executionType: ci
+  appiumServerUrl: http://127.0.0.1:4723
 
 jobs:
   E2E_Appium_Android:
@@ -46,11 +49,13 @@ jobs:
             -no-boot-anim
             -gpu swiftshader_indirect
           script: |
+            npm install -g wait-on
             appium --log-level error &
-            sleep 40
+            echo "Waiting for Appium to be ready..."
+            wait-on http://127.0.0.1:4723/wd/hub/status
             adb wait-for-device
             adb devices
-            mvn clean test -Dtest=E2E -DexecutionType=ci
+            mvn clean test -Dtest=E2E -DexecutionType=${{ env.executionType }} -DappiumServerUrl=${{ env.appiumServerUrl }}
 
       - name: Upload test reports
         if: always()
