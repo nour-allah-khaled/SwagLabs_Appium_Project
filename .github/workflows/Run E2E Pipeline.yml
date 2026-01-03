@@ -37,6 +37,14 @@ jobs:
           npm install -g appium wait-on
           appium driver install uiautomator2
 
+      - name: Install Android Platform Tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y android-sdk-platform-tools
+
+      - name: Set JAVA_HOME
+        run: echo "JAVA_HOME=$JAVA_HOME" >> $GITHUB_ENV
+
       - name: Start Android Emulator
         uses: reactivecircus/android-emulator-runner@v2
         with:
@@ -49,13 +57,14 @@ jobs:
             -no-audio
             -no-boot-anim
             -gpu swiftshader_indirect
+          emulator-boot-timeout: 600
 
       - name: Start Appium and Run E2E Tests
         run: |
           echo "Starting Appium server..."
           appium -a 0.0.0.0 -p 4723 --log-level error > appium.log 2>&1 &
           echo "Waiting for Appium server to be ready..."
-          wait-on --timeout 60000 http://127.0.0.1:4723/wd/hub/status
+          wait-on --timeout 120000 http://127.0.0.1:4723/wd/hub/status
           
           echo "Waiting for emulator to be ready..."
           adb wait-for-device
