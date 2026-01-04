@@ -62,9 +62,6 @@ public class DriverManager {
         }
     }
     private  static String getAppiumPath() {
-        if ("ci".equalsIgnoreCase(PropertyReader.getProperty("executionType"))) {
-            return null;
-        }
         return "C:\\Users\\Dell\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js";
     }
     private static String getServiceIpAddress() {
