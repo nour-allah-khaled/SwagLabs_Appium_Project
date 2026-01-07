@@ -1,0 +1,4 @@
+[INFO] 07-01-2026 22:04:48 [main] [com.swaglabs.listeners.TestNGListeners] - Test Case LoginToRemoveProductFromCart passed
+[INFO] 07-01-2026 22:04:49 [main] [com.swaglabs.android.DriverManager] - Driver quit successfully
+[INFO] 07-01-2026 22:04:49 [main] [com.swaglabs.android.DriverManager] - Appium server stopped successfully
+[INFO] 07-01-2026 22:04:49 [main] [com.swaglabs.listeners.TestNGListeners] - Test Execution Finished
