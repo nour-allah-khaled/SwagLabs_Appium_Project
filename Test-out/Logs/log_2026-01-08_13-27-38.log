@@ -1,0 +1,16 @@
+[INFO] 08-01-2026 13:27:40 [main] [com.swaglabs.android.DriverManager] - Driver quit successfully
+[INFO] 08-01-2026 13:27:40 [main] [com.swaglabs.android.DriverManager] - Appium server stopped successfully
+[INFO] 08-01-2026 13:27:45 [main] [com.swaglabs.android.DriverManager] - Appium service started.
+[INFO] 08-01-2026 13:27:58 [main] [com.swaglabs.android.DriverManager] - Driver initialized for platform: android
+[INFO] 08-01-2026 13:27:58 [main] [com.swaglabs.listeners.TestNGListeners] - Test Case LoginToLogout started
+[INFO] 08-01-2026 13:28:00 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-Username
+[INFO] 08-01-2026 13:28:02 [main] [com.swaglabs.utils.actions.ElementAction] - Focused on element: AppiumBy.accessibilityId: test-Username
+[INFO] 08-01-2026 13:28:03 [main] [com.swaglabs.utils.actions.ElementAction] - Typed text 'standard_user' into element: AppiumBy.accessibilityId: test-Username
+[INFO] 08-01-2026 13:28:05 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-Password
+[INFO] 08-01-2026 13:28:05 [main] [com.swaglabs.utils.actions.ElementAction] - Focused on element: AppiumBy.accessibilityId: test-Password
+[INFO] 08-01-2026 13:28:08 [main] [com.swaglabs.utils.actions.ElementAction] - Typed text 'secret_sauce' into element: AppiumBy.accessibilityId: test-Password
+[INFO] 08-01-2026 13:28:08 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-LOGIN
+[INFO] 08-01-2026 13:28:10 [main] [com.swaglabs.utils.actions.ElementAction] - Got text 'PRODUCTS' from element: By.xpath: //android.widget.TextView[@text="PRODUCTS"]
+[INFO] 08-01-2026 13:28:11 [main] [com.swaglabs.utils.WaitManager] - Waiting for element to be visible: By.xpath: //android.widget.TextView[@text="LOGOUT"]
+[INFO] 08-01-2026 13:28:12 [main] [com.swaglabs.utils.WaitManager] - Element is now visible: By.xpath: //android.widget.TextView[@text="LOGOUT"]
+[INFO] 08-01-2026 13:28:14 [main] [com.swaglabs.listeners.TestNGListeners] - Test LoginToLogout passed.

@@ -1,0 +1,17 @@
+[INFO] 08-01-2026 13:22:17 [main] [com.swaglabs.listeners.TestNGListeners] - Cleaned Allure results
+[INFO] 08-01-2026 13:22:17 [main] [com.swaglabs.listeners.TestNGListeners] - Cleaned Logfile
+[INFO] 08-01-2026 13:22:17 [main] [com.swaglabs.listeners.TestNGListeners] - Cleaned Screenshots Folder
+[INFO] 08-01-2026 13:22:17 [main] [com.swaglabs.listeners.TestNGListeners] - Starting execution
+[INFO] 08-01-2026 13:22:17 [main] [com.swaglabs.listeners.TestNGListeners] - Loaded properties
+[INFO] 08-01-2026 13:22:28 [main] [com.swaglabs.android.DriverManager] - Appium service started.
+[INFO] 08-01-2026 13:22:51 [main] [com.swaglabs.android.DriverManager] - Driver initialized for platform: android
+[INFO] 08-01-2026 13:22:52 [main] [com.swaglabs.listeners.TestNGListeners] - Test Case LoginTest started
+[INFO] 08-01-2026 13:22:55 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-Username
+[INFO] 08-01-2026 13:22:56 [main] [com.swaglabs.utils.actions.ElementAction] - Focused on element: AppiumBy.accessibilityId: test-Username
+[INFO] 08-01-2026 13:22:58 [main] [com.swaglabs.utils.actions.ElementAction] - Typed text 'standard_user' into element: AppiumBy.accessibilityId: test-Username
+[INFO] 08-01-2026 13:22:59 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-Password
+[INFO] 08-01-2026 13:23:01 [main] [com.swaglabs.utils.actions.ElementAction] - Focused on element: AppiumBy.accessibilityId: test-Password
+[INFO] 08-01-2026 13:23:03 [main] [com.swaglabs.utils.actions.ElementAction] - Typed text 'secret_sauce' into element: AppiumBy.accessibilityId: test-Password
+[INFO] 08-01-2026 13:23:05 [main] [com.swaglabs.utils.actions.ElementAction] - Clicked on element: AppiumBy.accessibilityId: test-LOGIN
+[INFO] 08-01-2026 13:23:08 [main] [com.swaglabs.utils.actions.ElementAction] - Got text 'PRODUCTS' from element: By.xpath: //android.widget.TextView[@text="PRODUCTS"]
+[INFO] 08-01-2026 13:23:08 [main] [com.swaglabs.listeners.TestNGListeners] - Test LoginTest passed.

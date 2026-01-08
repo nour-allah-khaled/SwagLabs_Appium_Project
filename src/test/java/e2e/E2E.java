@@ -11,20 +11,6 @@ import tests.BaseClass;
 public class E2E extends BaseClass {
     @Description("Comprehensive end-to-end test scenarios covering complete user journeys")
     @Epic("End-to-End Tests")
-   // Login > Home
-    @Test
-    public void LoginTest(){
-        new Page01_Login(DriverManager.getDriver()).userName(getUserName())
-                .passWord(getPassword()).loginBtn().assertLogin();
-    }
-    // Login -> Home -> Product Details
-    @Test
-    public void LoginToProductDetails(){
-        new Page01_Login(DriverManager.getDriver()).userName(getUserName())
-                .passWord(getPassword()).loginBtn().assertLogin();
-        new Page02_Home(DriverManager.getDriver()).ClickOnSpecificProductTitle()
-                .assertToProductDetails();
-    }
     // Login -> Home (with sorting product Name) -> Add to Cart -> Checkout > Overview > Finish > Home
     @Test
     public void LoginToFinshWithSortingProductByName() {
